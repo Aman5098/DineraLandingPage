@@ -6,77 +6,75 @@ const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 const REASONS = [
   {
     icon: Zap,
-    title: 'Setup 30 Min Mein',
-    desc: 'Koi IT expert nahi chahiye. Menu upload karo, tables set karo, staff add karo — aaj se hi live ho jao. We handle everything.',
-    color: 'amber',
+    title: 'Operational Within 30 Minutes',
+    desc: 'No IT consultant required. Upload your menu, configure your floor plan, add your staff — and open for service. Our onboarding team walks you through every step at no additional cost.',
+    color: 'gold',
     stat: '30 min',
-    statLabel: 'avg. onboarding',
+    statLabel: 'average onboarding time',
   },
   {
     icon: HeartHandshake,
-    title: 'India-First Support',
-    desc: 'WhatsApp pe Hindi/Hinglish support. Koi ticket system nahi, koi robot nahi. Real log, real time mein. 7 days a week.',
-    color: 'cyan',
-    stat: '<2 hr',
-    statLabel: 'response time',
+    title: 'Dedicated Human Support',
+    desc: 'No ticketing systems. No automated queues. When something needs attention, a real person responds — in your language, in your time zone, within two hours. Seven days a week.',
+    color: 'wine',
+    stat: '< 2 hr',
+    statLabel: 'average response time',
   },
   {
     icon: Globe,
-    title: 'Indian Market Ke Liye Banaya',
-    desc: 'UPI, GST, FSSAI — sab in-built. Indian restaurant workflows ke hisaab se design kiya gaya. Foreign software se compare mat karo.',
-    color: 'emerald',
+    title: 'Built for the Indian Market',
+    desc: 'UPI, GST compliance, FSSAI-ready — built in from day one, not bolted on as an afterthought. Designed around how Indian restaurants actually operate, not how foreign software assumes they do.',
+    color: 'neutral',
     stat: '100%',
     statLabel: 'GST compliant',
   },
   {
     icon: TrendingUp,
-    title: 'Revenue Badhta Hai',
-    desc: 'Average order value 15-25% badhti hai AI recommendations se. Table turnover fast hoti hai. Billing errors se hone wala loss band hota hai.',
-    color: 'purple',
+    title: 'Measurable Revenue Impact',
+    desc: 'AI-driven recommendations lift average order values by 15–25%. Faster table turnover increases covers per shift. Billing accuracy eliminates silent revenue leakage. The return is tangible and trackable.',
+    color: 'gold',
     stat: '+38%',
-    statLabel: 'avg. revenue increase',
+    statLabel: 'average revenue increase',
   },
   {
     icon: Award,
-    title: 'No Lock-in Contract',
-    desc: 'Monthly subscription. Kabhi bhi cancel karo. No questions asked. Lekin ek baar use karne ke baad — wapas jaana nahi chahoge.',
-    color: 'pink',
-    stat: '0',
+    title: 'No Long-Term Commitment',
+    desc: 'Month-to-month subscription. Cancel at any moment, for any reason, with no penalty. We retain customers through genuine value — not contractual obligation.',
+    color: 'warm',
+    stat: 'Zero',
     statLabel: 'lock-in period',
   },
   {
     icon: Phone,
-    title: 'Works on Any Device',
-    desc: 'Naya hardware mat kharido. Existing phones, tablets, laptops pe kaam karta hai. Kitchen mein old Android tablet bhi chalega.',
-    color: 'indigo',
+    title: 'Runs on Your Existing Hardware',
+    desc: 'No proprietary terminals to purchase. No specialist installation to arrange. Dinera runs on any smartphone, tablet, or laptop currently in your restaurant. Start today.',
+    color: 'neutral',
     stat: 'Any',
     statLabel: 'device supported',
   },
 ];
 
 const colorMap: Record<string, { text: string; border: string; bg: string; statText: string }> = {
-  amber:   { text: 'text-amber-400',   border: 'border-amber-500/20',   bg: 'bg-amber-500/10',   statText: 'text-amber-300'   },
-  cyan:    { text: 'text-cyan-400',    border: 'border-cyan-500/20',    bg: 'bg-cyan-500/10',    statText: 'text-cyan-300'    },
-  emerald: { text: 'text-emerald-400', border: 'border-emerald-500/20', bg: 'bg-emerald-500/10', statText: 'text-emerald-300' },
-  purple:  { text: 'text-purple-400',  border: 'border-purple-500/20',  bg: 'bg-purple-500/10',  statText: 'text-purple-300'  },
-  pink:    { text: 'text-pink-400',    border: 'border-pink-500/20',    bg: 'bg-pink-500/10',    statText: 'text-pink-300'    },
-  indigo:  { text: 'text-indigo-400',  border: 'border-indigo-500/20',  bg: 'bg-indigo-500/10',  statText: 'text-indigo-300'  },
+  gold:    { text: 'text-[#c9a84c]', border: 'border-[#b8922a]/18',  bg: 'bg-[#b8922a]/8',  statText: 'text-[#d4b97a]' },
+  wine:    { text: 'text-[#b8705a]', border: 'border-[#8b2035]/18',  bg: 'bg-[#6b1d2e]/8',  statText: 'text-[#c07868]' },
+  neutral: { text: 'text-[#8a7868]', border: 'border-[#3a3530]/18',  bg: 'bg-[#2a2520]/8',  statText: 'text-[#9a8878]' },
+  warm:    { text: 'text-[#a09080]', border: 'border-[#5a3828]/18',  bg: 'bg-[#3a2820]/8',  statText: 'text-[#b0a090]' },
 };
 
 const COMPETITORS = [
-  { name: 'Petpooja',   qr: true,  kds: false, ai: false, whatsapp: false, hindiSupport: false, price: '₹₹₹' },
-  { name: 'Posist',     qr: true,  kds: true,  ai: false, whatsapp: false, hindiSupport: false, price: '₹₹₹₹' },
-  { name: 'UrbanPiper', qr: false, kds: false, ai: false, whatsapp: true,  hindiSupport: false, price: '₹₹₹' },
-  { name: 'RestroOS',   qr: true,  kds: true,  ai: true,  whatsapp: true,  hindiSupport: true,  price: '₹₹',  isUs: true },
+  { name: 'Petpooja',   qr: true,  kds: false, ai: false, whatsapp: false, localSupport: false, price: '₹₹₹',  isUs: false },
+  { name: 'Posist',     qr: true,  kds: true,  ai: false, whatsapp: false, localSupport: false, price: '₹₹₹₹', isUs: false },
+  { name: 'UrbanPiper', qr: false, kds: false, ai: false, whatsapp: true,  localSupport: false, price: '₹₹₹',  isUs: false },
+  { name: 'Dinera',     qr: true,  kds: true,  ai: true,  whatsapp: true,  localSupport: true,  price: '₹₹',   isUs: true  },
 ];
 
 const CHECK_COLS = [
-  { key: 'qr',           label: 'QR Ordering' },
-  { key: 'kds',          label: 'KDS Screen' },
-  { key: 'ai',           label: 'AI Chatbot' },
+  { key: 'qr',           label: 'QR Ordering'     },
+  { key: 'kds',          label: 'KDS Screen'      },
+  { key: 'ai',           label: 'AI Assistant'    },
   { key: 'whatsapp',     label: 'WhatsApp Orders' },
-  { key: 'hindiSupport', label: 'Hindi Support' },
-  { key: 'price',        label: 'Price' },
+  { key: 'localSupport', label: 'Local Support'   },
+  { key: 'price',        label: 'Pricing Tier'    },
 ];
 
 export default function LandingWhyUs() {
@@ -84,8 +82,8 @@ export default function LandingWhyUs() {
     <section id="why-us" className="relative py-24 overflow-hidden">
       {/* BG */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent" />
-        <div className="absolute inset-0 grid-bg opacity-30" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-[#b8922a]/15 to-transparent" />
+        <div className="absolute inset-0 grid-bg opacity-25" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,10 +95,10 @@ export default function LandingWhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6b4a10]/12 border border-[#b8922a]/20 text-[#c9a84c] text-xs font-semibold uppercase tracking-widest mb-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Kyun RestroOS?
+            <span className="w-1.5 h-1.5 rounded-full bg-[#c9a84c] animate-pulse-soft" />
+            Why Dinera
           </motion.div>
 
           <motion.h2
@@ -108,18 +106,18 @@ export default function LandingWhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1, ease }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#f5f0e8] tracking-tight mb-4"
           >
-            Baaki Software Se{' '}
+            Substantively Different{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, #10b981 0%, #00f5ff 100%)',
+                background: 'linear-gradient(135deg, #c9a84c 0%, #a02840 100%)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Alag Kyun Hain?
+              From the Alternatives
             </span>
           </motion.h2>
 
@@ -128,9 +126,9 @@ export default function LandingWhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease }}
-            className="text-slate-400 text-lg max-w-2xl mx-auto"
+            className="text-[#7a6858] text-lg max-w-2xl mx-auto"
           >
-            Sirf features nahi — real reasons jo restaurant owners ko RestroOS choose karne pe majboor karte hain.
+            Not feature-count. The genuine reasons restaurant owners choose Dinera and do not look back.
           </motion.p>
         </div>
 
@@ -154,11 +152,11 @@ export default function LandingWhyUs() {
                   </div>
                   <div className="text-right">
                     <p className={`text-2xl font-extrabold ${c.statText}`}>{stat}</p>
-                    <p className="text-slate-600 text-[10px] uppercase tracking-wider">{statLabel}</p>
+                    <p className="text-[#3a3028] text-[10px] uppercase tracking-wider">{statLabel}</p>
                   </div>
                 </div>
-                <h3 className="text-white font-bold text-base mb-2">{title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
+                <h3 className="text-[#e8e0d6] font-bold text-base mb-2">{title}</h3>
+                <p className="text-[#6a5848] text-sm leading-relaxed">{desc}</p>
               </motion.div>
             );
           })}
@@ -171,28 +169,28 @@ export default function LandingWhyUs() {
           viewport={{ once: true }}
           transition={{ duration: 0.55, ease }}
         >
-          <h3 className="text-center text-white font-bold text-xl mb-8">
-            <span className="text-slate-400">Competitors vs </span>
+          <h3 className="text-center text-[#e8e0d6] font-bold text-xl mb-8">
+            <span className="text-[#5a4838]">The Competition vs. </span>
             <span
               style={{
-                background: 'linear-gradient(135deg, #00f5ff, #a855f7)',
+                background: 'linear-gradient(135deg, #a02840, #c9a84c)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              RestroOS
+              Dinera
             </span>
           </h3>
 
-          <div className="glass rounded-2xl border border-white/10 overflow-hidden">
+          <div className="glass rounded-2xl border border-[#f5f0e8]/[0.06] overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full min-w-[600px]">
                 <thead>
-                  <tr className="border-b border-white/[0.06]">
-                    <th className="text-left px-6 py-4 text-slate-500 text-xs uppercase tracking-wider font-semibold">Platform</th>
+                  <tr className="border-b border-[#f5f0e8]/[0.05]">
+                    <th className="text-left px-6 py-4 text-[#4a3828] text-xs uppercase tracking-wider font-semibold">Platform</th>
                     {CHECK_COLS.map(({ label }) => (
-                      <th key={label} className="text-center px-4 py-4 text-slate-500 text-xs uppercase tracking-wider font-semibold">{label}</th>
+                      <th key={label} className="text-center px-4 py-4 text-[#4a3828] text-xs uppercase tracking-wider font-semibold">{label}</th>
                     ))}
                   </tr>
                 </thead>
@@ -204,20 +202,20 @@ export default function LandingWhyUs() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.08, ease }}
-                      className={`border-b border-white/[0.04] transition-all duration-200 ${
+                      className={`border-b border-[#f5f0e8]/[0.03] transition-all duration-200 ${
                         comp.isUs
-                          ? 'bg-gradient-to-r from-cyan-500/5 to-purple-500/5 border-cyan-500/20'
-                          : 'hover:bg-white/[0.02]'
+                          ? 'bg-gradient-to-r from-[#6b1d2e]/6 to-[#b8922a]/6 border-[#b8922a]/15'
+                          : 'hover:bg-white/[0.015]'
                       }`}
                     >
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-2">
-                          <span className={`font-bold text-sm ${comp.isUs ? 'text-cyan-400' : 'text-slate-300'}`}>
+                          <span className={`font-bold text-sm ${comp.isUs ? 'text-[#c9a84c]' : 'text-[#5a4838]'}`}>
                             {comp.name}
                           </span>
                           {comp.isUs && (
-                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                              YOU
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-[#6b1d2e]/20 to-[#b8922a]/20 text-[#c9a84c] border border-[#b8922a]/25">
+                              You
                             </span>
                           )}
                         </div>
@@ -227,16 +225,16 @@ export default function LandingWhyUs() {
                         if (key === 'price') {
                           return (
                             <td key={key} className="text-center px-4 py-4">
-                              <span className={`font-bold text-sm ${comp.isUs ? 'text-emerald-400' : 'text-slate-500'}`}>{val as string}</span>
+                              <span className={`font-bold text-sm ${comp.isUs ? 'text-emerald-500' : 'text-[#3a3028]'}`}>{val as string}</span>
                             </td>
                           );
                         }
                         return (
                           <td key={key} className="text-center px-4 py-4">
                             {val ? (
-                              <span className={`text-lg ${comp.isUs ? 'text-emerald-400' : 'text-slate-400'}`}>✓</span>
+                              <span className={`text-lg ${comp.isUs ? 'text-emerald-500' : 'text-[#5a4838]'}`}>✓</span>
                             ) : (
-                              <span className="text-slate-700 text-lg">✗</span>
+                              <span className="text-[#2a2520] text-lg">✗</span>
                             )}
                           </td>
                         );
