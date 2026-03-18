@@ -3,32 +3,32 @@ import { UtensilsCrossed, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, Ma
 
 const FOOTER_LINKS = {
   Product: [
-    { label: 'QR Ordering',       href: '#solution'  },
-    { label: 'POS System',        href: '#solution'  },
-    { label: 'Kitchen Display',   href: '#solution'  },
-    { label: 'Analytics',         href: '#features'  },
-    { label: 'WhatsApp Ordering', href: '#features'  },
-    { label: 'AI Chatbot',        href: '#features'  },
+    { label: 'QR Ordering',        href: '#solution' },
+    { label: 'POS System',         href: '#solution' },
+    { label: 'Kitchen Display',    href: '#solution' },
+    { label: 'Analytics',          href: '#features' },
+    { label: 'WhatsApp Ordering',  href: '#features' },
+    { label: 'AI Chatbot',         href: '#features' },
   ],
   Company: [
-    { label: 'About Us',  href: '#' },
-    { label: 'Blog',      href: '#' },
-    { label: 'Careers',   href: '#' },
-    { label: 'Press',     href: '#' },
-    { label: 'Partners',  href: '#' },
+    { label: 'About Us',           href: '#' },
+    { label: 'Blog',               href: '#' },
+    { label: 'Careers',            href: '#' },
+    { label: 'Press',              href: '#' },
+    { label: 'Partners',           href: '#' },
   ],
   Support: [
-    { label: 'Help Center',       href: '#' },
-    { label: 'Documentation',     href: '#' },
-    { label: 'API Reference',     href: '#' },
-    { label: 'System Status',     href: '#' },
-    { label: 'WhatsApp Support',  href: '#' },
+    { label: 'Help Center',        href: '#' },
+    { label: 'Documentation',      href: '#' },
+    { label: 'API Reference',      href: '#' },
+    { label: 'System Status',      href: '#' },
+    { label: 'WhatsApp Support',   href: '#' },
   ],
   Legal: [
-    { label: 'Privacy Policy',   href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Refund Policy',    href: '#' },
-    { label: 'GDPR Compliance',  href: '#' },
+    { label: 'Privacy Policy',     href: '#' },
+    { label: 'Terms of Service',   href: '#' },
+    { label: 'Refund Policy',      href: '#' },
+    { label: 'GDPR Compliance',    href: '#' },
   ],
 };
 
@@ -51,7 +51,7 @@ export default function LandingFooter() {
   return (
     <footer className="relative border-t border-white/[0.06] overflow-hidden">
       {/* Subtle top glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-red-600/20 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -66,18 +66,18 @@ export default function LandingFooter() {
               className="flex items-center gap-2.5 mb-5 group w-fit"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-red-500 to-amber-500 flex items-center justify-center shadow-[0_0_16px_rgba(255,45,45,0.35)]">
-                <UtensilsCrossed className="w-4 h-4 text-white" strokeWidth={2.5} />
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center shadow-[0_0_16px_rgba(0,245,255,0.35)]">
+                <UtensilsCrossed className="w-4.5 h-4.5 text-[#030712]" strokeWidth={2.5} />
               </div>
               <span className="text-white font-bold text-xl tracking-tight">
-                Di<span
+                Restro<span
                   style={{
-                    background: 'linear-gradient(135deg, #ff2d2d, #f5a623)',
+                    background: 'linear-gradient(135deg, #00f5ff, #a855f7)',
                     WebkitBackgroundClip: 'text',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                   }}
-                >nera</span>
+                >OS</span>
               </span>
             </motion.a>
 
@@ -87,12 +87,12 @@ export default function LandingFooter() {
 
             {/* Contact info */}
             <div className="space-y-2.5 mb-6">
-              <a href="mailto:hello@dinera.in" className="flex items-center gap-2.5 text-slate-500 hover:text-amber-400 transition-colors text-sm group">
-                <Mail className="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors" />
-                hello@dinera.in
+              <a href="mailto:hello@restroos.in" className="flex items-center gap-2.5 text-slate-500 hover:text-cyan-400 transition-colors text-sm group">
+                <Mail className="w-4 h-4 text-slate-600 group-hover:text-cyan-400 transition-colors" />
+                hello@restroos.in
               </a>
-              <a href="tel:+919999999999" className="flex items-center gap-2.5 text-slate-500 hover:text-amber-400 transition-colors text-sm group">
-                <Phone className="w-4 h-4 text-slate-600 group-hover:text-amber-400 transition-colors" />
+              <a href="tel:+919999999999" className="flex items-center gap-2.5 text-slate-500 hover:text-cyan-400 transition-colors text-sm group">
+                <Phone className="w-4 h-4 text-slate-600 group-hover:text-cyan-400 transition-colors" />
                 +91 99999 99999
               </a>
               <div className="flex items-start gap-2.5 text-slate-500 text-sm">
@@ -109,7 +109,7 @@ export default function LandingFooter() {
                   href={href}
                   aria-label={label}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-9 h-9 rounded-lg glass border border-white/10 flex items-center justify-center text-slate-500 hover:text-amber-400 hover:border-amber-500/30 transition-all duration-200"
+                  className="w-9 h-9 rounded-lg glass border border-white/10 flex items-center justify-center text-slate-500 hover:text-cyan-400 hover:border-cyan-500/30 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" />
                 </motion.a>
@@ -152,7 +152,7 @@ export default function LandingFooter() {
         {/* Bottom bar */}
         <div className="py-6 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-slate-600 text-xs text-center sm:text-left">
-            © 2025 Dinera Technologies Pvt. Ltd. All rights reserved.
+            © 2025 RestroOS Technologies Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1.5 text-xs text-slate-600">

@@ -14,7 +14,7 @@ const TESTIMONIALS = [
     highlight: 'Orders kabhi miss nahi hote',
     metric: '+42% revenue',
     metricLabel: 'in 3 months',
-    color: 'red',
+    color: 'cyan',
   },
   {
     name: 'Priya Nair',
@@ -26,7 +26,7 @@ const TESTIMONIALS = [
     highlight: '30 minutes mein setup',
     metric: '100%',
     metricLabel: 'staff adoption rate',
-    color: 'amber',
+    color: 'purple',
   },
   {
     name: 'Arjun Mehta',
@@ -50,7 +50,7 @@ const TESTIMONIALS = [
     highlight: 'Average bill 20% badha',
     metric: '+20%',
     metricLabel: 'avg. order value',
-    color: 'gold',
+    color: 'amber',
   },
   {
     name: 'Kiran Patel',
@@ -62,7 +62,7 @@ const TESTIMONIALS = [
     highlight: '6 brands, 1 kitchen — zero chaos',
     metric: '6x',
     metricLabel: 'brands, 1 dashboard',
-    color: 'rose',
+    color: 'pink',
   },
   {
     name: 'Mohit Gupta',
@@ -74,17 +74,17 @@ const TESTIMONIALS = [
     highlight: 'Migration 2 ghante mein',
     metric: '40%',
     metricLabel: 'faster kitchen-to-table',
-    color: 'orange',
+    color: 'indigo',
   },
 ];
 
 const colorMap: Record<string, { text: string; border: string; bg: string; metric: string }> = {
-  red:     { text: 'text-red-400',     border: 'border-red-500/20',     bg: 'bg-red-500/10',     metric: 'text-red-300'     },
-  amber:   { text: 'text-amber-400',   border: 'border-amber-500/20',   bg: 'bg-amber-500/10',   metric: 'text-amber-300'   },
+  cyan:    { text: 'text-cyan-400',    border: 'border-cyan-500/20',    bg: 'bg-cyan-500/10',    metric: 'text-cyan-300'    },
+  purple:  { text: 'text-purple-400',  border: 'border-purple-500/20',  bg: 'bg-purple-500/10',  metric: 'text-purple-300'  },
   emerald: { text: 'text-emerald-400', border: 'border-emerald-500/20', bg: 'bg-emerald-500/10', metric: 'text-emerald-300' },
-  gold:    { text: 'text-yellow-400',  border: 'border-yellow-500/20',  bg: 'bg-yellow-500/10',  metric: 'text-yellow-300'  },
-  rose:    { text: 'text-rose-400',    border: 'border-rose-500/20',    bg: 'bg-rose-500/10',    metric: 'text-rose-300'    },
-  orange:  { text: 'text-orange-400',  border: 'border-orange-500/20',  bg: 'bg-orange-500/10',  metric: 'text-orange-300'  },
+  amber:   { text: 'text-amber-400',   border: 'border-amber-500/20',   bg: 'bg-amber-500/10',   metric: 'text-amber-300'   },
+  pink:    { text: 'text-pink-400',    border: 'border-pink-500/20',    bg: 'bg-pink-500/10',    metric: 'text-pink-300'    },
+  indigo:  { text: 'text-indigo-400',  border: 'border-indigo-500/20',  bg: 'bg-indigo-500/10',  metric: 'text-indigo-300'  },
 };
 
 export default function LandingTestimonials() {
@@ -92,9 +92,9 @@ export default function LandingTestimonials() {
     <section id="testimonials" className="relative py-24 overflow-hidden">
       {/* BG */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-amber-600/20 to-transparent" />
-        <div className="absolute top-1/3 -left-40 w-80 h-80 bg-amber-700/6 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/3 -right-40 w-80 h-80 bg-red-800/6 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+        <div className="absolute top-1/3 -left-40 w-80 h-80 bg-amber-500/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/3 -right-40 w-80 h-80 bg-purple-500/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,7 +122,7 @@ export default function LandingTestimonials() {
             2,400+ Owners Ko{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, #f5a623 0%, #ff2d2d 100%)',
+                background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -139,7 +139,7 @@ export default function LandingTestimonials() {
             transition={{ duration: 0.5, delay: 0.2, ease }}
             className="text-slate-400 text-lg max-w-2xl mx-auto"
           >
-            Yeh log pehle aap jaise tha — skeptical, busy, aur frustrated. Ab unhe pata hai Dinera kya kar sakta hai.
+            Yeh log pehle aap jaise tha — skeptical, busy, aur frustrated. Ab unhe pata hai RestroOS kya kar sakta hai.
           </motion.p>
         </div>
 
@@ -208,7 +208,7 @@ export default function LandingTestimonials() {
           className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left"
         >
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-lg font-bold text-white">G</div>
+            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-lg">G</div>
             <div>
               <div className="flex items-center gap-1.5">
                 {Array(5).fill(0).map((_, i) => <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />)}

@@ -13,16 +13,16 @@ const PLANS = [
     color: 'slate',
     popular: false,
     features: [
-      { text: 'QR Ordering (1 menu)',       included: true  },
-      { text: 'POS System',                 included: true  },
-      { text: 'Basic KDS Screen',           included: true  },
-      { text: 'Up to 10 tables',            included: true  },
-      { text: 'WhatsApp Notifications',     included: true  },
-      { text: 'Daily Revenue Report',       included: true  },
-      { text: 'AI Chatbot',                 included: false },
-      { text: 'WhatsApp Ordering',          included: false },
-      { text: 'Multi-location',             included: false },
-      { text: 'Advanced Analytics',         included: false },
+      { text: 'QR Ordering (1 menu)', included: true },
+      { text: 'POS System', included: true },
+      { text: 'Basic KDS Screen', included: true },
+      { text: 'Up to 10 tables', included: true },
+      { text: 'WhatsApp Notifications', included: true },
+      { text: 'Daily Revenue Report', included: true },
+      { text: 'AI Chatbot', included: false },
+      { text: 'WhatsApp Ordering', included: false },
+      { text: 'Multi-location', included: false },
+      { text: 'Advanced Analytics', included: false },
     ],
     cta: 'Start Free Trial',
     ctaStyle: 'outline',
@@ -32,19 +32,19 @@ const PLANS = [
     hinglish: 'Zyaadatar restaurants ke liye',
     monthlyPrice: 3999,
     yearlyPrice: 2999,
-    color: 'brand',
+    color: 'cyan',
     popular: true,
     features: [
-      { text: 'QR Ordering (unlimited menus)',    included: true  },
-      { text: 'Full POS System',                  included: true  },
-      { text: 'Advanced KDS + Priority Queue',    included: true  },
-      { text: 'Unlimited Tables & Seats',         included: true  },
-      { text: 'WhatsApp Notifications',           included: true  },
-      { text: 'Real-time Analytics Dashboard',    included: true  },
-      { text: 'AI Menu Chatbot',                  included: true  },
-      { text: 'WhatsApp Ordering',                included: true  },
-      { text: 'Multi-location (up to 3)',         included: false },
-      { text: 'Dedicated Account Manager',        included: false },
+      { text: 'QR Ordering (unlimited menus)', included: true },
+      { text: 'Full POS System', included: true },
+      { text: 'Advanced KDS + Priority Queue', included: true },
+      { text: 'Unlimited Tables & Seats', included: true },
+      { text: 'WhatsApp Notifications', included: true },
+      { text: 'Real-time Analytics Dashboard', included: true },
+      { text: 'AI Menu Chatbot', included: true },
+      { text: 'WhatsApp Ordering', included: true },
+      { text: 'Multi-location (up to 3)', included: false },
+      { text: 'Dedicated Account Manager', included: false },
     ],
     cta: 'Start Free Trial',
     ctaStyle: 'gradient',
@@ -54,29 +54,29 @@ const PLANS = [
     hinglish: 'Multi-location chains ke liye',
     monthlyPrice: null,
     yearlyPrice: null,
-    color: 'amber',
+    color: 'purple',
     popular: false,
     features: [
-      { text: 'Everything in Pro',           included: true },
-      { text: 'Unlimited Locations',         included: true },
-      { text: 'Custom AI Training',          included: true },
-      { text: 'White-label Option',          included: true },
-      { text: 'Dedicated Account Manager',   included: true },
-      { text: 'Custom Integrations',         included: true },
-      { text: 'SLA Guarantee',               included: true },
-      { text: 'On-site Training',            included: true },
-      { text: 'Priority 24/7 Support',       included: true },
-      { text: 'Custom Reporting',            included: true },
+      { text: 'Everything in Pro', included: true },
+      { text: 'Unlimited Locations', included: true },
+      { text: 'Custom AI Training', included: true },
+      { text: 'White-label Option', included: true },
+      { text: 'Dedicated Account Manager', included: true },
+      { text: 'Custom Integrations', included: true },
+      { text: 'SLA Guarantee', included: true },
+      { text: 'On-site Training', included: true },
+      { text: 'Priority 24/7 Support', included: true },
+      { text: 'Custom Reporting', included: true },
     ],
     cta: 'Talk to Sales',
-    ctaStyle: 'amber',
+    ctaStyle: 'purple',
   },
 ];
 
-const colorMap: Record<string, { border: string; bg: string; text: string }> = {
-  slate: { border: 'border-white/10',         bg: '',                    text: 'text-slate-300'  },
-  brand: { border: 'border-red-500/40',        bg: 'bg-red-500/5',        text: 'text-red-400'    },
-  amber: { border: 'border-amber-500/30',      bg: 'bg-amber-500/5',      text: 'text-amber-400'  },
+const colorMap: Record<string, { border: string; bg: string; text: string; badge: string }> = {
+  slate:  { border: 'border-white/10',         bg: '',                           text: 'text-slate-300',   badge: ''                                  },
+  cyan:   { border: 'border-cyan-500/40',       bg: 'bg-cyan-500/5',              text: 'text-cyan-400',    badge: 'bg-cyan-500/20 text-cyan-300'       },
+  purple: { border: 'border-purple-500/30',     bg: 'bg-purple-500/5',            text: 'text-purple-400',  badge: 'bg-purple-500/20 text-purple-300'   },
 };
 
 export default function LandingPricing() {
@@ -86,7 +86,7 @@ export default function LandingPricing() {
     <section id="pricing" className="relative py-24 overflow-hidden">
       {/* BG */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
         <div className="absolute inset-0 grid-bg opacity-30" />
       </div>
 
@@ -99,9 +99,9 @@ export default function LandingPricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-widest mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-semibold uppercase tracking-widest mb-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
             Simple Pricing
           </motion.div>
 
@@ -115,7 +115,7 @@ export default function LandingPricing() {
             Aapke Budget Mein.{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, #ff2d2d 0%, #f5a623 100%)',
+                background: 'linear-gradient(135deg, #a855f7 0%, #00f5ff 100%)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -179,16 +179,16 @@ export default function LandingPricing() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1, ease }}
                 className={`relative glass rounded-3xl border ${c.border} ${c.bg} ${
-                  popular ? 'shadow-[0_0_60px_rgba(255,45,45,0.12)]' : ''
+                  popular ? 'shadow-[0_0_60px_rgba(0,245,255,0.1)]' : ''
                 } overflow-hidden`}
               >
-                {/* Popular badge — top stripe */}
+                {/* Popular badge */}
                 {popular && (
-                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-red-600 via-amber-500 to-red-600" />
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500" />
                 )}
                 {popular && (
                   <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-gradient-to-r from-red-500/20 to-amber-500/20 text-amber-300 border border-amber-500/30">
+                    <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                       ⭐ Most Popular
                     </span>
                   </div>
@@ -198,8 +198,8 @@ export default function LandingPricing() {
                   {/* Plan name */}
                   <div className="mb-6">
                     <div className="flex items-center gap-2 mb-1">
-                      {popular && <Zap className="w-4 h-4 text-amber-400" />}
-                      <h3 className={`font-extrabold text-xl ${popular ? 'text-amber-400' : 'text-white'}`}>{name}</h3>
+                      {popular && <Zap className="w-4 h-4 text-cyan-400" />}
+                      <h3 className={`font-extrabold text-xl ${popular ? 'text-cyan-400' : 'text-white'}`}>{name}</h3>
                     </div>
                     <p className="text-slate-500 text-sm">{hinglish}</p>
                   </div>
@@ -246,13 +246,13 @@ export default function LandingPricing() {
                     whileTap={{ scale: 0.97 }}
                     className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-sm mb-8 transition-all duration-300 ${
                       ctaStyle === 'gradient'
-                        ? 'bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-[0_0_24px_rgba(255,45,45,0.30)] hover:shadow-[0_0_40px_rgba(245,166,35,0.50)]'
-                        : ctaStyle === 'amber'
-                        ? 'bg-amber-500/15 border border-amber-500/40 text-amber-300 hover:bg-amber-500/25'
+                        ? 'bg-gradient-to-r from-cyan-500 to-cyan-400 text-[#030712] shadow-[0_0_24px_rgba(0,245,255,0.3)] hover:shadow-[0_0_40px_rgba(0,245,255,0.5)]'
+                        : ctaStyle === 'purple'
+                        ? 'bg-purple-500/20 border border-purple-500/40 text-purple-300 hover:bg-purple-500/30'
                         : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'
                     }`}
                   >
-                    {ctaStyle === 'amber' ? <Phone className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+                    {ctaStyle === 'purple' ? <Phone className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                     {cta}
                   </motion.button>
 
@@ -283,9 +283,9 @@ export default function LandingPricing() {
           className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center"
         >
           {[
-            { q: 'Setup cost?',   a: 'Zero. Free onboarding included.'        },
-            { q: 'Contract?',     a: 'Month-to-month. Cancel anytime.'         },
-            { q: 'Data secure?',  a: '100% encrypted. Bank-grade security.'    },
+            { q: 'Setup cost?', a: 'Zero. Free onboarding included.' },
+            { q: 'Contract?', a: 'Month-to-month. Cancel anytime.' },
+            { q: 'Data secure?', a: '100% encrypted. Bank-grade security.' },
           ].map(({ q, a }) => (
             <div key={q} className="glass rounded-xl border border-white/[0.06] p-4">
               <p className="text-white font-semibold text-sm mb-1">{q}</p>

@@ -3,17 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { UtensilsCrossed, Menu, X, ChevronRight } from 'lucide-react';
 
 const NAV_LINKS = [
-  { label: 'Problems',     href: '#problem'      },
-  { label: 'Solution',     href: '#solution'     },
-  { label: 'Features',     href: '#features'     },
+  { label: 'Problems', href: '#problem' },
+  { label: 'Solution', href: '#solution' },
+  { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Pricing',      href: '#pricing'      },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'Testimonials', href: '#testimonials' },
 ];
 
 export default function LandingNavbar() {
-  const [scrolled,    setScrolled]    = useState(false);
-  const [mobileOpen,  setMobileOpen]  = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -31,17 +31,16 @@ export default function LandingNavbar() {
     <>
       <motion.header
         initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0,  opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[#0a0303]/90 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_4px_40px_rgba(0,0,0,0.5)]'
+            ? 'bg-[#030712]/90 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_4px_40px_rgba(0,0,0,0.4)]'
             : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-18">
-
             {/* Logo */}
             <motion.a
               href="#"
@@ -49,18 +48,11 @@ export default function LandingNavbar() {
               className="flex items-center gap-2.5 group"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-red-500 to-amber-500 flex items-center justify-center shadow-[0_0_16px_rgba(255,45,45,0.45)] group-hover:shadow-[0_0_26px_rgba(245,166,35,0.6)] transition-all duration-300">
-                <UtensilsCrossed className="w-4 h-4 text-white" strokeWidth={2.5} />
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center shadow-[0_0_16px_rgba(0,245,255,0.4)] group-hover:shadow-[0_0_24px_rgba(0,245,255,0.6)] transition-all duration-300">
+                <UtensilsCrossed className="w-4 h-4 text-[#030712]" strokeWidth={2.5} />
               </div>
               <span className="text-white font-bold text-lg tracking-tight">
-                Di<span
-                  style={{
-                    background: 'linear-gradient(135deg, #ff2d2d 0%, #f5a623 100%)',
-                    WebkitBackgroundClip: 'text',
-                    backgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >nera</span>
+                Restro<span className="gradient-text-cyan">OS</span>
               </span>
             </motion.a>
 
@@ -83,10 +75,10 @@ export default function LandingNavbar() {
                 Login
               </button>
               <motion.button
-                whileHover={{ scale: 1.04 }}
+                whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => scrollTo('#demo')}
-                className="px-5 py-2 rounded-xl text-sm font-semibold bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-[0_0_20px_rgba(255,45,45,0.35)] hover:shadow-[0_0_32px_rgba(245,166,35,0.55)] transition-all duration-300"
+                className="px-5 py-2 rounded-xl text-sm font-semibold bg-gradient-to-r from-cyan-500 to-cyan-400 text-[#030712] shadow-[0_0_20px_rgba(0,245,255,0.3)] hover:shadow-[0_0_30px_rgba(0,245,255,0.5)] transition-all duration-300"
               >
                 Free Demo
               </motion.button>
@@ -111,7 +103,7 @@ export default function LandingNavbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-x-0 top-16 z-40 bg-[#0a0303]/95 backdrop-blur-xl border-b border-white/[0.06] lg:hidden"
+            className="fixed inset-x-0 top-16 z-40 bg-[#030712]/95 backdrop-blur-xl border-b border-white/[0.06] lg:hidden"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
@@ -127,7 +119,7 @@ export default function LandingNavbar() {
               <div className="mt-3 pt-3 border-t border-white/[0.06]">
                 <button
                   onClick={() => scrollTo('#demo')}
-                  className="w-full py-3 rounded-xl text-sm font-semibold bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-[0_0_20px_rgba(255,45,45,0.3)]"
+                  className="w-full py-3 rounded-xl text-sm font-semibold bg-gradient-to-r from-cyan-500 to-cyan-400 text-[#030712]"
                 >
                   Free Demo Book Karo
                 </button>

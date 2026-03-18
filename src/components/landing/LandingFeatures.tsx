@@ -12,21 +12,21 @@ const FEATURES = [
     icon: QrCode,
     title: 'QR Based Ordering',
     desc: 'Customer table pe QR scan kare aur seedha order kare. Koi app download nahi, koi login nahi. Digital menu real-time update hota hai.',
-    color: 'red',
+    color: 'cyan',
     highlights: ['Instant digital menu', 'Special instructions', 'Real-time item availability'],
   },
   {
     icon: Monitor,
     title: 'Smart POS System',
     desc: 'Billing, order management, discount, tax — sab ek screen pe. Fast checkout, zero errors. Multiple payment modes supported.',
-    color: 'amber',
+    color: 'purple',
     highlights: ['Auto tax calculation', 'Split bill support', 'UPI / Card / Cash'],
   },
   {
     icon: ChefHat,
     title: 'Kitchen Display System',
     desc: 'Har order kitchen screen pe seedha dikhta hai. Queue management, priority marking, ready status — chef ko sab clear milta hai.',
-    color: 'orange',
+    color: 'amber',
     highlights: ['Real-time KOT', 'Priority queue', 'Preparation timer'],
   },
   {
@@ -40,14 +40,14 @@ const FEATURES = [
     icon: LayoutGrid,
     title: 'Table & Seat Management',
     desc: 'Floor plan pe live dekho — kaun sa table occupied, reserved, ya available. Seat-level tracking se precise billing.',
-    color: 'rose',
+    color: 'pink',
     highlights: ['Interactive floor map', 'Seat-level ordering', 'Merge / split tables'],
   },
   {
     icon: BarChart3,
     title: 'Analytics Dashboard',
     desc: 'Revenue, top dishes, peak hours, staff performance — sab data ek jagah. Gut feeling chhodo, numbers se decide karo.',
-    color: 'gold',
+    color: 'indigo',
     highlights: ['Daily P&L report', 'Bestseller analysis', 'Hourly revenue trend'],
   },
   {
@@ -61,21 +61,21 @@ const FEATURES = [
     icon: Bot,
     title: 'AI Menu Chatbot',
     desc: 'Customer kuch pooche — AI turant jawab deta hai. Dish recommendations, allergen info, combos suggest kare. Upselling automatic.',
-    color: 'yellow',
+    color: 'violet',
     highlights: ['Smart recommendations', 'Allergen aware', '24/7 available'],
   },
   {
     icon: Bell,
     title: 'Smart Notifications',
     desc: 'Order ready, table waiting, payment pending — sab alerts real-time milte hain. Koi cheez miss nahi hoti.',
-    color: 'red',
+    color: 'rose',
     highlights: ['Role-based alerts', 'Sound + visual', 'Escalation rules'],
   },
   {
     icon: Smartphone,
     title: 'Mobile First Design',
     desc: 'Waiter ka phone, kitchen tablet, owner ka iPad — sab pe perfectly kaam karta hai. Koi special hardware nahi chahiye.',
-    color: 'amber',
+    color: 'cyan',
     highlights: ['Works on any device', 'No special hardware', 'Offline capable'],
   },
   {
@@ -89,21 +89,22 @@ const FEATURES = [
     icon: Zap,
     title: 'Setup in 30 Minutes',
     desc: 'Menu upload, table setup, staff onboard — sab 30 minutes mein. Koi IT expertise nahi chahiye. Live ho jao aaj hi.',
-    color: 'orange',
+    color: 'amber',
     highlights: ['Zero IT needed', 'Guided onboarding', 'Free training call'],
   },
 ];
 
-const colorMap: Record<string, { text: string; border: string; bg: string; dot: string; glow: string }> = {
-  red:     { text: 'text-red-400',     border: 'border-red-500/20',     bg: 'bg-red-500/10',     dot: 'bg-red-400',     glow: 'group-hover:shadow-[0_0_30px_rgba(255,45,45,0.10)]'     },
-  amber:   { text: 'text-amber-400',   border: 'border-amber-500/20',   bg: 'bg-amber-500/10',   dot: 'bg-amber-400',   glow: 'group-hover:shadow-[0_0_30px_rgba(245,158,11,0.10)]'   },
-  orange:  { text: 'text-orange-400',  border: 'border-orange-500/20',  bg: 'bg-orange-500/10',  dot: 'bg-orange-400',  glow: 'group-hover:shadow-[0_0_30px_rgba(249,115,22,0.10)]'  },
-  emerald: { text: 'text-emerald-400', border: 'border-emerald-500/20', bg: 'bg-emerald-500/10', dot: 'bg-emerald-400', glow: 'group-hover:shadow-[0_0_30px_rgba(16,185,129,0.10)]'  },
-  rose:    { text: 'text-rose-400',    border: 'border-rose-500/20',    bg: 'bg-rose-500/10',    dot: 'bg-rose-400',    glow: 'group-hover:shadow-[0_0_30px_rgba(244,63,94,0.10)]'    },
-  gold:    { text: 'text-yellow-400',  border: 'border-yellow-500/20',  bg: 'bg-yellow-500/10',  dot: 'bg-yellow-400',  glow: 'group-hover:shadow-[0_0_30px_rgba(234,179,8,0.10)]'    },
-  green:   { text: 'text-green-400',   border: 'border-green-500/20',   bg: 'bg-green-500/10',   dot: 'bg-green-400',   glow: 'group-hover:shadow-[0_0_30px_rgba(34,197,94,0.10)]'    },
-  yellow:  { text: 'text-yellow-300',  border: 'border-yellow-400/20',  bg: 'bg-yellow-400/10',  dot: 'bg-yellow-300',  glow: 'group-hover:shadow-[0_0_30px_rgba(253,224,71,0.10)]'   },
-  slate:   { text: 'text-slate-300',   border: 'border-slate-500/20',   bg: 'bg-slate-500/10',   dot: 'bg-slate-300',   glow: 'group-hover:shadow-[0_0_30px_rgba(100,116,139,0.10)]'  },
+const colorMap: Record<string, { text: string; border: string; bg: string; glow: string }> = {
+  cyan:    { text: 'text-cyan-400',    border: 'border-cyan-500/20',    bg: 'bg-cyan-500/10',    glow: 'group-hover:shadow-[0_0_30px_rgba(0,245,255,0.08)]'      },
+  purple:  { text: 'text-purple-400',  border: 'border-purple-500/20',  bg: 'bg-purple-500/10',  glow: 'group-hover:shadow-[0_0_30px_rgba(168,85,247,0.08)]'    },
+  amber:   { text: 'text-amber-400',   border: 'border-amber-500/20',   bg: 'bg-amber-500/10',   glow: 'group-hover:shadow-[0_0_30px_rgba(245,158,11,0.08)]'   },
+  emerald: { text: 'text-emerald-400', border: 'border-emerald-500/20', bg: 'bg-emerald-500/10', glow: 'group-hover:shadow-[0_0_30px_rgba(16,185,129,0.08)]'   },
+  pink:    { text: 'text-pink-400',    border: 'border-pink-500/20',    bg: 'bg-pink-500/10',    glow: 'group-hover:shadow-[0_0_30px_rgba(236,72,153,0.08)]'   },
+  indigo:  { text: 'text-indigo-400',  border: 'border-indigo-500/20',  bg: 'bg-indigo-500/10',  glow: 'group-hover:shadow-[0_0_30px_rgba(99,102,241,0.08)]'  },
+  green:   { text: 'text-green-400',   border: 'border-green-500/20',   bg: 'bg-green-500/10',   glow: 'group-hover:shadow-[0_0_30px_rgba(34,197,94,0.08)]'    },
+  violet:  { text: 'text-violet-400',  border: 'border-violet-500/20',  bg: 'bg-violet-500/10',  glow: 'group-hover:shadow-[0_0_30px_rgba(139,92,246,0.08)]'  },
+  rose:    { text: 'text-rose-400',    border: 'border-rose-500/20',    bg: 'bg-rose-500/10',    glow: 'group-hover:shadow-[0_0_30px_rgba(244,63,94,0.08)]'    },
+  slate:   { text: 'text-slate-300',   border: 'border-slate-500/20',   bg: 'bg-slate-500/10',   glow: 'group-hover:shadow-[0_0_30px_rgba(100,116,139,0.08)]' },
 };
 
 export default function LandingFeatures() {
@@ -111,9 +112,9 @@ export default function LandingFeatures() {
     <section id="features" className="relative py-24 overflow-hidden">
       {/* BG */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-red-600/20 to-transparent" />
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-red-800/8 rounded-full blur-[140px]" />
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-amber-700/8 rounded-full blur-[140px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-[140px]" />
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-violet-500/5 rounded-full blur-[140px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,9 +126,9 @@ export default function LandingFeatures() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-widest mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
             Features
           </motion.div>
 
@@ -141,7 +142,7 @@ export default function LandingFeatures() {
             Sab Kuch Ek Jagah.{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, #ff2d2d 0%, #f5a623 100%)',
+                background: 'linear-gradient(135deg, #00f5ff 0%, #a855f7 100%)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -191,7 +192,10 @@ export default function LandingFeatures() {
                 <div className="space-y-1.5 border-t border-white/[0.05] pt-4">
                   {highlights.map((h) => (
                     <div key={h} className="flex items-center gap-2 text-xs text-slate-500">
-                      <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${c.dot} opacity-70`} />
+                      <div className={`w-1 h-1 rounded-full ${c.bg} border ${c.border} shrink-0`} style={{ backgroundColor: 'currentColor' }}>
+                        <div className={`w-1 h-1 rounded-full ${c.text.replace('text-', 'bg-')}`} />
+                      </div>
+                      <span className={`w-1 h-1 rounded-full shrink-0 ${c.text.replace('text-', 'bg-')} opacity-70`} />
                       {h}
                     </div>
                   ))}
@@ -211,7 +215,7 @@ export default function LandingFeatures() {
         >
           <p className="text-slate-500 text-sm">
             Sab features ek hi subscription mein included hain.{' '}
-            <span className="text-amber-400 font-semibold">Koi hidden charges nahi.</span>
+            <span className="text-cyan-400 font-semibold">Koi hidden charges nahi.</span>
           </p>
         </motion.div>
       </div>

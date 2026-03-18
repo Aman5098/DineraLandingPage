@@ -8,10 +8,10 @@ export default function LandingFinalCTA() {
     <section className="relative py-28 overflow-hidden">
       {/* Big glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-red-800/10 rounded-full blur-[200px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-amber-700/8 rounded-full blur-[120px]" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-red-600/40 to-transparent" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-amber-600/20 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-cyan-500/8 rounded-full blur-[180px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-purple-500/8 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -22,7 +22,7 @@ export default function LandingFinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease }}
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-widest mb-8"
+          className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-8"
         >
           <Zap className="w-3.5 h-3.5" />
           Abhi Shuru Karo — Kal Tak Intezaar Kyun?
@@ -39,7 +39,7 @@ export default function LandingFinalCTA() {
           Aapka Restaurant{' '}
           <span
             style={{
-              background: 'linear-gradient(135deg, #ff2d2d 0%, #f5a623 55%, #ff0055 100%)',
+              background: 'linear-gradient(135deg, #00f5ff 0%, #a855f7 50%, #ec4899 100%)',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -57,7 +57,7 @@ export default function LandingFinalCTA() {
           transition={{ duration: 0.6, delay: 0.2, ease }}
           className="text-slate-400 text-xl leading-relaxed mb-12 max-w-2xl mx-auto"
         >
-          Har din jo aap bina Dinera ke chalate ho — woh din mein kuch orders lost, kuch billing errors, kuch customer frustration. Ab aur nahi.
+          Har din jo aap bina RestroOS ke chalate ho — woh din mein kuch orders lost, kuch billing errors, kuch customer frustration. Ab aur nahi.
         </motion.p>
 
         {/* Restaurant image banner */}
@@ -73,8 +73,8 @@ export default function LandingFinalCTA() {
             alt="Busy restaurant"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0303] via-[#0a0303]/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0303]/60 via-transparent to-[#0a0303]/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/60 via-transparent to-[#030712]/60" />
 
           {/* Overlay content */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -82,12 +82,12 @@ export default function LandingFinalCTA() {
               <p className="text-white font-bold text-2xl sm:text-3xl mb-2 drop-shadow-lg">
                 "Pehle survive karte the. Ab thrive karte hain."
               </p>
-              <p className="text-slate-300 text-sm">— Rajesh Sharma, Spice Garden Delhi (Dinera user since 2023)</p>
+              <p className="text-slate-300 text-sm">— Rajesh Sharma, Spice Garden Delhi (RestroOS user since 2023)</p>
             </div>
           </div>
 
           {/* Live stats floating */}
-          <div className="absolute top-4 right-4 glass-strong rounded-xl border border-amber-500/30 px-4 py-2">
+          <div className="absolute top-4 right-4 glass-strong rounded-xl border border-cyan-500/30 px-4 py-2">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <p className="text-white font-semibold text-sm">247 restaurants live right now</p>
@@ -106,9 +106,9 @@ export default function LandingFinalCTA() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
-            className="group relative w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 rounded-2xl font-bold text-lg bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-[0_0_40px_rgba(255,45,45,0.40)] hover:shadow-[0_0_70px_rgba(245,166,35,0.65)] transition-all duration-300 overflow-hidden"
+            className="group relative w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 rounded-2xl font-bold text-lg bg-gradient-to-r from-cyan-500 to-cyan-400 text-[#030712] shadow-[0_0_40px_rgba(0,245,255,0.4)] hover:shadow-[0_0_70px_rgba(0,245,255,0.65)] transition-all duration-300 overflow-hidden"
           >
-            <span className="absolute inset-0 bg-white/15 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12" />
+            <span className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12" />
             <Calendar className="w-5 h-5 relative z-10" />
             <span className="relative z-10">14-Day Free Trial Shuru Karo</span>
             <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />

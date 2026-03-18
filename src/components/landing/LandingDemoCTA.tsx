@@ -11,9 +11,9 @@ const WHAT_YOU_GET = [
 ];
 
 const TRUST_STATS = [
-  { icon: Users,    value: '2,400+', label: 'Restaurants'    },
-  { icon: Star,     value: '4.9/5',  label: 'Google Rating'  },
-  { icon: Clock,    value: '30 min', label: 'Demo Duration'  },
+  { icon: Users, value: '2,400+', label: 'Restaurants' },
+  { icon: Star,  value: '4.9/5',  label: 'Google Rating' },
+  { icon: Clock, value: '30 min', label: 'Demo Duration' },
 ];
 
 export default function LandingDemoCTA() {
@@ -26,8 +26,8 @@ export default function LandingDemoCTA() {
     <section id="demo" className="relative py-24 overflow-hidden">
       {/* BG glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-red-800/8 rounded-full blur-[140px]" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-cyan-500/8 rounded-full blur-[140px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,10 +36,10 @@ export default function LandingDemoCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease }}
-          className="glass-strong rounded-3xl border border-red-500/20 overflow-hidden"
+          className="glass-strong rounded-3xl border border-cyan-500/20 overflow-hidden"
         >
           {/* Top gradient strip */}
-          <div className="h-1 bg-gradient-to-r from-red-600 via-amber-500 to-red-600" />
+          <div className="h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500" />
 
           <div className="p-8 sm:p-12 lg:p-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -51,9 +51,9 @@ export default function LandingDemoCTA() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, ease }}
-                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-widest mb-6"
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-6"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
                   Free Demo — No Commitment
                 </motion.div>
 
@@ -61,7 +61,7 @@ export default function LandingDemoCTA() {
                   Dekho Kaise Kaam Karta Hai{' '}
                   <span
                     style={{
-                      background: 'linear-gradient(135deg, #ff2d2d 0%, #f5a623 100%)',
+                      background: 'linear-gradient(135deg, #00f5ff 0%, #a855f7 100%)',
                       WebkitBackgroundClip: 'text',
                       backgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
@@ -72,7 +72,7 @@ export default function LandingDemoCTA() {
                 </h2>
 
                 <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                  30 minute ki live demo mein aap dekhoge ki Dinera aapke specific restaurant ke liye kaise kaam karega.
+                  30 minute ki live demo mein aap dekhoge ki RestroOS aapke specific restaurant ke liye kaise kaam karega.
                   <span className="text-slate-200 font-medium"> Koi sales pressure nahi. Sirf real answers.</span>
                 </p>
 
@@ -80,7 +80,7 @@ export default function LandingDemoCTA() {
                 <div className="space-y-3 mb-8">
                   {WHAT_YOU_GET.map((item) => (
                     <div key={item} className="flex items-center gap-3 text-sm text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <CheckCircle2 className="w-4.5 h-4.5 text-emerald-400 shrink-0" />
                       {item}
                     </div>
                   ))}
@@ -107,7 +107,7 @@ export default function LandingDemoCTA() {
                     alt="Restaurant demo"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0303]/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/80 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <p className="text-white font-semibold text-sm">Live demo — aapke real menu ke saath</p>
                   </div>
@@ -123,7 +123,7 @@ export default function LandingDemoCTA() {
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-[0_0_30px_rgba(255,45,45,0.35)] hover:shadow-[0_0_50px_rgba(245,166,35,0.55)] transition-all duration-300"
+                  className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-cyan-500 to-cyan-400 text-[#030712] shadow-[0_0_30px_rgba(0,245,255,0.35)] hover:shadow-[0_0_50px_rgba(0,245,255,0.55)] transition-all duration-300"
                 >
                   <Calendar className="w-5 h-5" />
                   Free Demo Schedule Karo
@@ -135,9 +135,9 @@ export default function LandingDemoCTA() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}
                     onClick={() => scrollTo('#pricing')}
-                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold glass border border-white/10 text-white hover:border-amber-500/30 transition-all"
+                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold glass border border-white/10 text-white hover:border-white/20 transition-all"
                   >
-                    <ArrowRight className="w-4 h-4 text-amber-400" />
+                    <ArrowRight className="w-4 h-4 text-cyan-400" />
                     Pricing Dekho
                   </motion.button>
 

@@ -10,7 +10,7 @@ const STEPS = [
     title: 'Customer QR Scan Karta Hai',
     hinglish: 'Table pe QR code hai — bas scan karo',
     desc: 'Customer apne phone se table ka QR scan karta hai. Instantly digital menu open hota hai — bina app download, bina login. Customer apni marzi se order select karta hai, special instructions add karta hai.',
-    color: 'red',
+    color: 'cyan',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
     outcome: 'Order placed in 60 seconds',
   },
@@ -40,17 +40,17 @@ const STEPS = [
     title: 'Owner Dashboard Pe Sab Live',
     hinglish: 'Ghar pe baithe, phone pe dekho',
     desc: 'Ek bhi order close hote hi dashboard update hota hai. Revenue, top dishes, table turnover, staff performance — sab real-time. Owner chahe restaurant mein ho ya ghar pe, poori picture clear hai.',
-    color: 'gold',
+    color: 'purple',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
     outcome: 'Full control, anywhere',
   },
 ];
 
-const colorMap: Record<string, { text: string; border: string; bg: string; badge: string }> = {
-  red:     { text: 'text-red-400',     border: 'border-red-500/30',     bg: 'bg-red-500/10',     badge: 'bg-red-500/20 text-red-300 border-red-500/30'       },
-  amber:   { text: 'text-amber-400',   border: 'border-amber-500/30',   bg: 'bg-amber-500/10',   badge: 'bg-amber-500/20 text-amber-300 border-amber-500/30' },
-  emerald: { text: 'text-emerald-400', border: 'border-emerald-500/30', bg: 'bg-emerald-500/10', badge: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' },
-  gold:    { text: 'text-yellow-400',  border: 'border-yellow-500/30',  bg: 'bg-yellow-500/10',  badge: 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30' },
+const colorMap: Record<string, { text: string; border: string; bg: string; badge: string; step: string; connector: string }> = {
+  cyan:    { text: 'text-cyan-400',    border: 'border-cyan-500/30',    bg: 'bg-cyan-500/10',    badge: 'bg-cyan-500/20 text-cyan-300',    step: 'text-cyan-500/40',    connector: 'from-cyan-500/30'    },
+  amber:   { text: 'text-amber-400',   border: 'border-amber-500/30',   bg: 'bg-amber-500/10',   badge: 'bg-amber-500/20 text-amber-300',   step: 'text-amber-500/40',   connector: 'from-amber-500/30'   },
+  emerald: { text: 'text-emerald-400', border: 'border-emerald-500/30', bg: 'bg-emerald-500/10', badge: 'bg-emerald-500/20 text-emerald-300', step: 'text-emerald-500/40', connector: 'from-emerald-500/30' },
+  purple:  { text: 'text-purple-400',  border: 'border-purple-500/30',  bg: 'bg-purple-500/10',  badge: 'bg-purple-500/20 text-purple-300',  step: 'text-purple-500/40',  connector: 'from-purple-500/30'  },
 };
 
 export default function LandingHowItWorks() {
@@ -59,7 +59,7 @@ export default function LandingHowItWorks() {
       {/* BG */}
       <div className="absolute inset-0 pointer-events-none grid-bg opacity-50" />
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-amber-600/30 to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,9 +71,9 @@ export default function LandingHowItWorks() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-semibold uppercase tracking-widest mb-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
             Kaise Kaam Karta Hai
           </motion.div>
 
@@ -87,7 +87,7 @@ export default function LandingHowItWorks() {
             Scan to{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, #f5a623 0%, #ff2d2d 100%)',
+                background: 'linear-gradient(135deg, #a855f7 0%, #00f5ff 100%)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -132,14 +132,14 @@ export default function LandingHowItWorks() {
                         alt={title}
                         className="w-full h-full object-cover"
                       />
-                      <div className={`absolute inset-0 bg-gradient-to-${isEven ? 'r' : 'l'} from-[#0a0303]/80 via-[#0a0303]/30 to-transparent`} />
+                      <div className={`absolute inset-0 bg-gradient-to-${isEven ? 'r' : 'l'} from-[#030712]/80 via-[#030712]/30 to-transparent`} />
                       {/* Step number overlay */}
                       <div className={`absolute top-4 ${isEven ? 'right-4' : 'left-4'}`}>
                         <span className={`text-6xl font-black opacity-30 ${c.text}`}>{step}</span>
                       </div>
                       {/* Outcome badge */}
                       <div className={`absolute bottom-4 ${isEven ? 'left-4' : 'right-4'}`}>
-                        <span className={`px-3 py-1.5 rounded-xl text-xs font-bold ${c.badge} backdrop-blur-sm border`}>
+                        <span className={`px-3 py-1.5 rounded-xl text-xs font-bold ${c.badge} backdrop-blur-sm border ${c.border}`}>
                           ✓ {outcome}
                         </span>
                       </div>
@@ -153,7 +153,7 @@ export default function LandingHowItWorks() {
                         </div>
                         <div>
                           <span className={`text-xs font-bold uppercase tracking-widest ${c.text} opacity-60`}>Step {step}</span>
-                          <h3 className="text-xl font-bold text-white">{title}</h3>
+                          <h3 className={`text-xl font-bold text-white`}>{title}</h3>
                         </div>
                       </div>
 
@@ -187,11 +187,11 @@ export default function LandingHowItWorks() {
           transition={{ duration: 0.5, delay: 0.2, ease }}
           className="mt-14 flex justify-center"
         >
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl glass border border-amber-500/20 bg-gradient-to-r from-red-500/5 to-amber-500/5 text-center">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl glass border border-white/10 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 text-center">
             <span className="text-2xl">⚡</span>
             <div>
               <p className="text-white font-bold">Scan se served tak — sirf 8-12 minutes.</p>
-              <p className="text-slate-500 text-sm">Average industry time: 22 minutes. Dinera ke saath: 8 minutes.</p>
+              <p className="text-slate-500 text-sm">Average industry time: 22 minutes. RestroOS ke saath: 8 minutes.</p>
             </div>
           </div>
         </motion.div>

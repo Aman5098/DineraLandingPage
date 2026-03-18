@@ -52,9 +52,9 @@ const PROBLEMS = [
     title: 'Koi Visibility Nahi',
     hinglish: '"Aaj kitna hua?" — kisi ko nahi pata',
     desc: 'Din ke end mein cashier ka number, kitchen ka count aur actual cash — teeno alag. Decisions gut feeling se hote hain, data se nahi.',
-    color: 'text-amber-500',
-    bg: 'bg-amber-600/10 border-amber-600/20',
-    glow: 'hover:shadow-[0_0_30px_rgba(217,119,6,0.12)]',
+    color: 'text-purple-400',
+    bg: 'bg-purple-500/10 border-purple-500/20',
+    glow: 'hover:shadow-[0_0_30px_rgba(168,85,247,0.12)]',
   },
   {
     icon: RefreshCw,
@@ -62,9 +62,9 @@ const PROBLEMS = [
     title: 'Menu Update Nightmare',
     hinglish: 'Price badhana hai? Har waiter ko alag bolna padega',
     desc: 'Out-of-stock item customer order karta hai. Wrong price charge hoti hai. Promotion end ho gayi lekin menu mein abhi bhi chal rahi hai.',
-    color: 'text-red-300',
-    bg: 'bg-red-600/10 border-red-600/20',
-    glow: 'hover:shadow-[0_0_30px_rgba(220,38,38,0.12)]',
+    color: 'text-indigo-400',
+    bg: 'bg-indigo-500/10 border-indigo-500/20',
+    glow: 'hover:shadow-[0_0_30px_rgba(99,102,241,0.12)]',
   },
   {
     icon: Lock,
@@ -72,9 +72,9 @@ const PROBLEMS = [
     title: 'Owner Trap Mein Hai',
     hinglish: 'Aap nahi to restaurant nahi',
     desc: 'Moment aap nikalte ho — sab dhila pad jaata hai. Sunday off? Doosri location? Yeh sab sapne hain. Pehle yeh system solve karo.',
-    color: 'text-amber-400',
-    bg: 'bg-amber-500/10 border-amber-500/20',
-    glow: 'hover:shadow-[0_0_30px_rgba(245,158,11,0.12)]',
+    color: 'text-cyan-400',
+    bg: 'bg-cyan-500/10 border-cyan-500/20',
+    glow: 'hover:shadow-[0_0_30px_rgba(0,245,255,0.12)]',
   },
 ];
 
@@ -83,9 +83,9 @@ export default function LandingProblem() {
     <section id="problem" className="relative py-24 overflow-hidden">
       {/* Subtle bg */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent" />
-        <div className="absolute top-1/2 -left-60 w-80 h-80 bg-red-800/8 rounded-full blur-[100px]" />
-        <div className="absolute bottom-1/4 -right-60 w-80 h-80 bg-amber-700/8 rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent" />
+        <div className="absolute top-1/2 -left-60 w-80 h-80 bg-red-500/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 -right-60 w-80 h-80 bg-orange-500/5 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,7 +113,7 @@ export default function LandingProblem() {
             Yeh Problems Aapko{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, #ff2d2d, #f5a623)',
+                background: 'linear-gradient(135deg, #f87171, #fb923c)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -169,20 +169,20 @@ export default function LandingProblem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: 0.5, ease }}
-              className="mt-4 glass rounded-2xl border border-amber-500/25 bg-gradient-to-r from-amber-500/5 via-transparent to-red-500/5 p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 hover:shadow-[0_0_40px_rgba(245,166,35,0.10)] transition-all duration-300"
+              className="mt-4 glass rounded-2xl border border-cyan-500/20 bg-gradient-to-r from-cyan-500/5 via-transparent to-purple-500/5 p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 hover:shadow-[0_0_40px_rgba(0,245,255,0.08)] transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center shrink-0">
-                <Icon className="w-7 h-7 text-amber-400" />
+              <div className="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
+                <Icon className="w-7 h-7 text-cyan-400" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-1">
-                  <h3 className="font-bold text-lg text-amber-400">{last.title}</h3>
+                  <h3 className="font-bold text-lg text-cyan-400">{last.title}</h3>
                   <span className="text-2xl">{last.emoji}</span>
                 </div>
                 <p className="text-slate-500 text-sm italic mb-2">{last.hinglish}</p>
                 <p className="text-slate-400 leading-relaxed">{last.desc}</p>
               </div>
-              <div className="shrink-0 px-6 py-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm font-semibold text-center">
+              <div className="shrink-0 px-6 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-sm font-semibold text-center">
                 Sabse Badi<br />Problem Yeh Hai
               </div>
             </motion.div>
@@ -201,7 +201,7 @@ export default function LandingProblem() {
             Agar aapne <span className="text-red-400 font-bold">3 ya zyada problems</span> pehchaani hain...
           </p>
           <p className="text-slate-500 mt-1">
-            ...to Dinera exactly aapke liye bana hai. Neeche dekho kaise.
+            ...to RestroOS exactly aapke liye bana hai. Neeche dekho kaise.
           </p>
           <motion.div
             animate={{ y: [0, 6, 0] }}

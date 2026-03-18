@@ -8,23 +8,23 @@ const ease = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 const STATS = [
   { value: '2,400+', label: 'Restaurants' },
-  { value: '98%',    label: 'Uptime'       },
-  { value: '4.9★',   label: 'Rating'       },
+  { value: '98%',    label: 'Uptime' },
+  { value: '4.9★',   label: 'Rating' },
   { value: '40%',    label: 'Faster Orders' },
 ];
 
 const BULLETS = [
   { icon: QrCode,    text: 'QR se khud order kare customer' },
-  { icon: ChefHat,   text: 'Kitchen screen pe seedha KOT'  },
-  { icon: Monitor,   text: 'POS + billing ek jagah'        },
-  { icon: BarChart3, text: 'Real-time sales dashboard'     },
+  { icon: ChefHat,   text: 'Kitchen screen pe seedha KOT' },
+  { icon: Monitor,   text: 'POS + billing ek jagah' },
+  { icon: BarChart3, text: 'Real-time sales dashboard' },
 ];
 
 const ORDERS = [
   { table: 'T-04', item: 'Butter Chicken + Naan ×2', status: 'Preparing', color: 'text-amber-400',   dot: 'bg-amber-400'   },
   { table: 'T-07', item: 'Paneer Tikka ×1',          status: 'Ready',     color: 'text-emerald-400', dot: 'bg-emerald-400' },
-  { table: 'T-02', item: 'Dal Makhani + Rice ×3',    status: 'Delivered', color: 'text-red-400',     dot: 'bg-red-400'     },
-  { table: 'T-09', item: 'Biryani ×2',               status: 'New',       color: 'text-amber-500',   dot: 'bg-amber-500'   },
+  { table: 'T-02', item: 'Dal Makhani + Rice ×3',    status: 'Delivered', color: 'text-cyan-400',    dot: 'bg-cyan-400'    },
+  { table: 'T-09', item: 'Biryani ×2',               status: 'New',       color: 'text-pink-400',    dot: 'bg-pink-400'    },
 ];
 
 export default function LandingHero() {
@@ -35,11 +35,11 @@ export default function LandingHero() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden grid-bg">
-      {/* Background orbs — red/gold palette */}
+      {/* Background orbs */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 -left-40 w-96 h-96 bg-red-700/12 rounded-full blur-[130px]" />
-        <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-amber-600/10 rounded-full blur-[130px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-900/8 rounded-full blur-[180px]" />
+        <div className="absolute top-1/4 -left-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[160px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -47,15 +47,14 @@ export default function LandingHero() {
 
           {/* ── LEFT ── */}
           <div className="flex flex-col gap-6">
-
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-widest w-fit"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-widest w-fit"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
               🚀 India's #1 Restaurant OS — Ab Chaos Khatam
             </motion.div>
 
@@ -71,7 +70,7 @@ export default function LandingHero() {
                 <span
                   className="relative z-10"
                   style={{
-                    background: 'linear-gradient(135deg, #ff2d2d 0%, #f5a623 55%, #ff0055 100%)',
+                    background: 'linear-gradient(135deg, #00f5ff 0%, #a855f7 50%, #ec4899 100%)',
                     WebkitBackgroundClip: 'text',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -103,8 +102,8 @@ export default function LandingHero() {
             >
               {BULLETS.map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-2.5 text-sm text-slate-300">
-                  <div className="w-7 h-7 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center shrink-0">
-                    <Icon className="w-3.5 h-3.5 text-red-400" />
+                  <div className="w-7 h-7 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
+                    <Icon className="w-3.5 h-3.5 text-cyan-400" />
                   </div>
                   {text}
                 </div>
@@ -122,21 +121,21 @@ export default function LandingHero() {
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => scrollTo('#demo')}
-                className="group relative flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-red-600 via-red-500 to-amber-500 text-white shadow-[0_0_28px_rgba(255,45,45,0.40)] hover:shadow-[0_0_44px_rgba(245,166,35,0.60)] transition-all duration-300 overflow-hidden"
+                className="group relative flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-500 to-cyan-400 text-[#030712] shadow-[0_0_24px_rgba(0,245,255,0.35)] hover:shadow-[0_0_40px_rgba(0,245,255,0.55)] transition-all duration-300 overflow-hidden"
               >
-                <span className="absolute inset-0 bg-white/15 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12" />
-                <Zap className="w-4 h-4 relative z-10" />
-                <span className="relative z-10">Free Demo Book Karo</span>
-                <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
+                <span className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12" />
+                <Zap className="w-4 h-4" />
+                Free Demo Book Karo
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => scrollTo('#how-it-works')}
-                className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm glass border border-white/10 text-white hover:border-amber-500/30 transition-all duration-300"
+                className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm glass border border-white/10 text-white hover:border-white/20 transition-all duration-300"
               >
-                <Play className="w-4 h-4 text-amber-400 fill-amber-400" />
+                <Play className="w-4 h-4 text-cyan-400 fill-cyan-400" />
                 Kaise Kaam Karta Hai?
               </motion.button>
             </motion.div>
@@ -170,7 +169,7 @@ export default function LandingHero() {
                   'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=face',
                   'https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?w=40&h=40&fit=crop&crop=face',
                 ].map((src, i) => (
-                  <img key={i} src={src} alt="user" className="w-8 h-8 rounded-full border-2 border-[#0a0303] object-cover" />
+                  <img key={i} src={src} alt="user" className="w-8 h-8 rounded-full border-2 border-[#030712] object-cover" />
                 ))}
               </div>
               <div>
@@ -190,7 +189,7 @@ export default function LandingHero() {
             className="relative"
           >
             {/* Glow behind card */}
-            <div className="absolute inset-0 bg-gradient-to-br from-red-700/25 via-amber-600/15 to-red-900/10 rounded-3xl blur-3xl scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/10 to-pink-500/10 rounded-3xl blur-3xl scale-110" />
 
             <div className="relative glass-strong rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
               {/* Chrome bar */}
@@ -201,7 +200,7 @@ export default function LandingHero() {
                   <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
                 </div>
                 <div className="flex-1 mx-3 bg-white/5 border border-white/[0.06] rounded-md px-3 py-1 text-xs text-slate-500">
-                  app.dinera.in/dashboard
+                  app.restroos.in/dashboard
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -218,7 +217,7 @@ export default function LandingHero() {
                     alt="Restaurant"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#0a0303]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/70 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3">
                     <p className="text-white font-bold text-sm">Spice Garden</p>
                     <p className="text-slate-300 text-xs">Connaught Place, Delhi</p>
@@ -227,7 +226,7 @@ export default function LandingHero() {
                     <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 border border-emerald-500/40 text-emerald-400">
                       Open
                     </span>
-                    <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 border border-amber-500/40 text-amber-400">
+                    <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-cyan-500/20 border border-cyan-500/40 text-cyan-400">
                       12 Tables Live
                     </span>
                   </div>
@@ -237,9 +236,9 @@ export default function LandingHero() {
                 <div className="grid grid-cols-4 gap-2">
                   {[
                     { label: 'Revenue', value: '₹42,800', icon: TrendingUp, color: 'text-emerald-400', bg: 'bg-emerald-500/10 border-emerald-500/20' },
-                    { label: 'Orders',  value: '187',     icon: BarChart3,  color: 'text-amber-400',   bg: 'bg-amber-500/10 border-amber-500/20'    },
-                    { label: 'Tables',  value: '12/16',   icon: Monitor,    color: 'text-red-400',     bg: 'bg-red-500/10 border-red-500/20'        },
-                    { label: 'Rating',  value: '4.9★',    icon: Star,       color: 'text-amber-400',   bg: 'bg-amber-500/10 border-amber-500/20'    },
+                    { label: 'Orders',  value: '187',     icon: BarChart3,  color: 'text-cyan-400',    bg: 'bg-cyan-500/10 border-cyan-500/20'    },
+                    { label: 'Tables',  value: '12/16',   icon: Monitor,    color: 'text-purple-400',  bg: 'bg-purple-500/10 border-purple-500/20' },
+                    { label: 'Rating',  value: '4.9★',    icon: Star,       color: 'text-amber-400',   bg: 'bg-amber-500/10 border-amber-500/20'  },
                   ].map(({ label, value, icon: Icon, color, bg }, i) => (
                     <motion.div
                       key={label}
@@ -259,7 +258,7 @@ export default function LandingHero() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Live Orders</p>
-                    <span className="text-[10px] text-amber-400 font-medium">Auto-sync</span>
+                    <span className="text-[10px] text-cyan-400 font-medium">Auto-sync</span>
                   </div>
                   <div className="space-y-1.5">
                     {ORDERS.map(({ table, item, status, color, dot }, i) => (
@@ -289,31 +288,30 @@ export default function LandingHero() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-4 -left-6 glass-strong border border-amber-500/30 rounded-2xl px-4 py-2.5 shadow-xl"
+              className="absolute -bottom-4 -left-6 glass-strong border border-emerald-500/30 rounded-2xl px-4 py-2.5 shadow-xl"
             >
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center">
-                  <TrendingUp className="w-4 h-4 text-amber-400" />
+                <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
-                  <p className="text-amber-400 font-bold text-sm">+38% Revenue</p>
+                  <p className="text-emerald-400 font-bold text-sm">+38% Revenue</p>
                   <p className="text-slate-500 text-[10px]">vs last month</p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Floating notification */}
+            {/* Floating QR pill */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.2, duration: 0.5, ease }}
-              className="absolute -top-4 -right-4 glass-strong border border-red-500/30 rounded-2xl px-3 py-2 shadow-xl"
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+              className="absolute -top-4 -right-4 glass-strong border border-cyan-500/30 rounded-2xl px-4 py-2.5 shadow-xl"
             >
               <div className="flex items-center gap-2">
-                <span className="text-base">🔔</span>
+                <QrCode className="w-5 h-5 text-cyan-400" />
                 <div>
-                  <p className="text-white font-semibold text-xs">New Order — T-12</p>
-                  <p className="text-slate-500 text-[10px]">Chicken Biryani ×2</p>
+                  <p className="text-white font-semibold text-xs">QR Order</p>
+                  <p className="text-cyan-400 text-[10px] font-medium">Scan → Order → Done</p>
                 </div>
               </div>
             </motion.div>
@@ -324,21 +322,15 @@ export default function LandingHero() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.85, ease }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4"
+          transition={{ duration: 0.6, delay: 0.8, ease }}
+          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.05] rounded-2xl overflow-hidden border border-white/[0.06]"
         >
-          {STATS.map(({ value, label }, i) => (
-            <motion.div
-              key={label}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.9 + i * 0.08, ease }}
-              className="glass rounded-2xl border border-white/[0.07] px-6 py-5 text-center group hover:border-amber-500/20 transition-all duration-300"
-            >
+          {STATS.map(({ value, label }) => (
+            <div key={label} className="bg-[#030712] px-6 py-5 text-center">
               <p
-                className="text-3xl font-extrabold mb-1"
+                className="text-2xl font-extrabold"
                 style={{
-                  background: 'linear-gradient(135deg, #ff2d2d 0%, #f5a623 100%)',
+                  background: 'linear-gradient(135deg, #00f5ff, #a855f7)',
                   WebkitBackgroundClip: 'text',
                   backgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -346,8 +338,8 @@ export default function LandingHero() {
               >
                 {value}
               </p>
-              <p className="text-slate-500 text-sm font-medium">{label}</p>
-            </motion.div>
+              <p className="text-slate-500 text-sm mt-0.5">{label}</p>
+            </div>
           ))}
         </motion.div>
       </div>

@@ -8,7 +8,7 @@ export default function App() {
       <Routes>
         {/* Landing page is the default route */}
         <Route path="/" element={<LandingPage />} />
-        {/* Original NexusAI marketing page kept at /nexus — legacy */}
+        {/* Original NexusAI marketing page kept at /nexus */}
         <Route path="/nexus" element={<OldHomePage />} />
         {/* Legacy route alias */}
         <Route path="/landing" element={<Navigate to="/" replace />} />
