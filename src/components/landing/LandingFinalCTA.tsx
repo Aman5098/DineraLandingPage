@@ -55,7 +55,7 @@ export default function LandingFinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
-          className="text-[#7a6858] text-xl leading-relaxed mb-12 max-w-2xl mx-auto"
+          className="text-[#d1c1b2] text-xl leading-relaxed mb-12 max-w-2xl mx-auto"
         >
           Every day without a proper system costs you orders, revenue, and owner peace of mind. That changes the moment Dinera goes live.
         </motion.p>
@@ -82,7 +82,7 @@ export default function LandingFinalCTA() {
               <p className="text-[#f5f0e8] font-bold text-2xl sm:text-3xl mb-2 drop-shadow-lg">
                 "We went from surviving service to running it."
               </p>
-              <p className="text-[#8a7868] text-sm">— Rajesh Sharma, Spice Garden New Delhi · Dinera customer since 2023</p>
+              <p className="text-[#d1bba8] text-sm">— Rajesh Sharma, Spice Garden New Delhi · Dinera customer since 2023</p>
             </div>
           </div>
 
@@ -130,7 +130,7 @@ export default function LandingFinalCTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.35, ease }}
-          className="flex flex-wrap items-center justify-center gap-6 text-sm text-[#4a3828]"
+          className="flex flex-wrap items-center justify-center gap-6 text-sm text-[#bd8c61]"
         >
           <span className="flex items-center gap-2">
             <Shield className="w-4 h-4 text-emerald-700" />
@@ -152,7 +152,7 @@ export default function LandingFinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.45, ease }}
-          className="mt-12 text-[#3a3028] text-sm italic"
+          className="mt-12 text-[#917966] text-sm italic"
         >
           "Your restaurant runs exactly as you intend — whether you are present or not." · This is now possible. 🍽️
         </motion.p>

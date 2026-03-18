@@ -102,7 +102,7 @@ export default function LandingHowItWorks() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease }}
-            className="text-[#7a6858] text-lg max-w-2xl mx-auto"
+            className="text-[#d1c1b2] text-lg max-w-2xl mx-auto"
           >
             A guest scans the QR code. Four automatic steps later, their order has travelled from table to kitchen to tray — without a single manual handoff.
           </motion.p>
@@ -157,7 +157,7 @@ export default function LandingHowItWorks() {
                       </div>
 
                       <p className={`text-sm font-semibold italic mb-3 ${c.text}`}>"{subtitle}"</p>
-                      <p className="text-[#7a6858] leading-relaxed">{desc}</p>
+                      <p className="text-[#d1c1b2] leading-relaxed">{desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -169,7 +169,7 @@ export default function LandingHowItWorks() {
                       animate={{ y: [0, 4, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                     >
-                      <ArrowDown className="w-5 h-5 text-[#3a3028]" />
+                      <ArrowDown className="w-5 h-5 text-[#917966]" />
                     </motion.div>
                   </div>
                 )}
@@ -190,7 +190,7 @@ export default function LandingHowItWorks() {
             <span className="text-2xl">⏱</span>
             <div>
               <p className="text-[#e8e0d6] font-bold">From scan to served — averaging 8 to 12 minutes.</p>
-              <p className="text-[#5a4838] text-sm">Industry average: 22 minutes. The difference is felt by every guest, every service.</p>
+              <p className="text-[#c7a486] text-sm">Industry average: 22 minutes. The difference is felt by every guest, every service.</p>
             </div>
           </div>
         </motion.div>

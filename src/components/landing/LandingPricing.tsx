@@ -130,7 +130,7 @@ export default function LandingPricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease }}
-            className="text-[#7a6858] text-lg max-w-xl mx-auto mb-8"
+            className="text-[#d1c1b2] text-lg max-w-xl mx-auto mb-8"
           >
             Every plan includes a 14-day free trial. No credit card required to begin.
           </motion.p>
@@ -146,7 +146,7 @@ export default function LandingPricing() {
             <button
               onClick={() => setYearly(false)}
               className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                !yearly ? 'bg-[#f5f0e8]/[0.08] text-[#e8e0d6]' : 'text-[#4a3828] hover:text-[#8a7868]'
+                !yearly ? 'bg-[#f5f0e8]/[0.08] text-[#e8e0d6]' : 'text-[#bd8c61] hover:text-[#d1bba8]'
               }`}
             >
               Monthly
@@ -154,7 +154,7 @@ export default function LandingPricing() {
             <button
               onClick={() => setYearly(true)}
               className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 flex items-center gap-2 ${
-                yearly ? 'bg-[#f5f0e8]/[0.08] text-[#e8e0d6]' : 'text-[#4a3828] hover:text-[#8a7868]'
+                yearly ? 'bg-[#f5f0e8]/[0.08] text-[#e8e0d6]' : 'text-[#bd8c61] hover:text-[#d1bba8]'
               }`}
             >
               Annual
@@ -200,7 +200,7 @@ export default function LandingPricing() {
                     <div className="flex items-center gap-2 mb-1">
                       <h3 className={`font-extrabold text-xl ${popular ? 'text-[#c9a84c]' : 'text-[#e8e0d6]'}`}>{name}</h3>
                     </div>
-                    <p className="text-[#4a3828] text-sm">{subtitle}</p>
+                    <p className="text-[#bd8c61] text-sm">{subtitle}</p>
                   </div>
 
                   {/* Price */}
@@ -216,7 +216,7 @@ export default function LandingPricing() {
                         >
                           <div className="flex items-end gap-2">
                             <span className="text-4xl font-extrabold text-[#f5f0e8]">₹{price?.toLocaleString('en-IN')}</span>
-                            <span className="text-[#4a3828] text-sm mb-1.5">/month</span>
+                            <span className="text-[#bd8c61] text-sm mb-1.5">/month</span>
                           </div>
                           {yearly && (
                             <p className="text-emerald-600 text-xs mt-1 font-medium">
@@ -233,7 +233,7 @@ export default function LandingPricing() {
                           transition={{ duration: 0.2 }}
                         >
                           <p className="text-3xl font-extrabold text-[#f5f0e8]">Custom</p>
-                          <p className="text-[#4a3828] text-sm mt-1">Pricing based on your scale and requirements</p>
+                          <p className="text-[#bd8c61] text-sm mt-1">Pricing based on your scale and requirements</p>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -258,10 +258,10 @@ export default function LandingPricing() {
                   {/* Features list */}
                   <div className="space-y-3">
                     {features.map(({ text, included }) => (
-                      <div key={text} className={`flex items-center gap-3 text-sm ${included ? 'text-[#a09080]' : 'text-[#3a3028]'}`}>
+                      <div key={text} className={`flex items-center gap-3 text-sm ${included ? 'text-[#a09080]' : 'text-[#917966]'}`}>
                         {included
                           ? <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                          : <X className="w-4 h-4 text-[#2a2520] shrink-0" />
+                          : <X className="w-4 h-4 text-[#ffc992] shrink-0" />
                         }
                         {text}
                       </div>
@@ -288,7 +288,7 @@ export default function LandingPricing() {
           ].map(({ q, a }) => (
             <div key={q} className="glass rounded-xl border border-[#f5f0e8]/[0.05] p-4">
               <p className="text-[#c0b0a0] font-semibold text-sm mb-1">{q}</p>
-              <p className="text-[#4a3828] text-xs">{a}</p>
+              <p className="text-[#bd8c61] text-xs">{a}</p>
             </div>
           ))}
         </motion.div>

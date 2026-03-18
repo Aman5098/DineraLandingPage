@@ -121,7 +121,7 @@ export default function LandingNavbar() {
                   className="flex items-center justify-between w-full px-4 py-3 text-sm text-[#c0b0a0] hover:text-[#e8e0d6] hover:bg-white/[0.04] rounded-xl transition-all text-left font-medium"
                 >
                   {link.label}
-                  <ChevronRight className="w-4 h-4 text-[#5a4838]" />
+                  <ChevronRight className="w-4 h-4 text-[#c7a486]" />
                 </button>
               ))}
               <div className="mt-3 pt-3 border-t border-[#f5f0e8]/[0.05]">

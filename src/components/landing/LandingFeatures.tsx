@@ -98,7 +98,7 @@ const colorMap: Record<string, { text: string; border: string; bg: string; dot: 
   wine:    { text: 'text-[#b8705a]', border: 'border-[#8b2035]/15',  bg: 'bg-[#6b1d2e]/8',  dot: 'bg-[#b8705a]', glow: 'group-hover:shadow-[0_0_24px_rgba(107,29,46,0.08)]'  },
   gold:    { text: 'text-[#c9a84c]', border: 'border-[#b8922a]/15',  bg: 'bg-[#b8922a]/8',  dot: 'bg-[#c9a84c]', glow: 'group-hover:shadow-[0_0_24px_rgba(184,146,42,0.08)]' },
   warm:    { text: 'text-[#a09080]', border: 'border-[#5a3828]/15',  bg: 'bg-[#3a2820]/8',  dot: 'bg-[#a09080]', glow: 'group-hover:shadow-[0_0_24px_rgba(90,56,40,0.08)]'   },
-  neutral: { text: 'text-[#8a7868]', border: 'border-[#3a3530]/15',  bg: 'bg-[#2a2520]/8',  dot: 'bg-[#8a7868]', glow: 'group-hover:shadow-[0_0_24px_rgba(50,45,40,0.08)]'   },
+  neutral: { text: 'text-[#d1bba8]', border: 'border-[#3a3530]/15',  bg: 'bg-[#ffc992]/8',  dot: 'bg-[#d1bba8]', glow: 'group-hover:shadow-[0_0_24px_rgba(50,45,40,0.08)]'   },
 };
 
 export default function LandingFeatures() {
@@ -151,7 +151,7 @@ export default function LandingFeatures() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease }}
-            className="text-[#7a6858] text-lg max-w-2xl mx-auto"
+            className="text-[#d1c1b2] text-lg max-w-2xl mx-auto"
           >
             Twelve capabilities, designed to work in concert — like a perfectly coordinated kitchen brigade.
           </motion.p>
@@ -180,12 +180,12 @@ export default function LandingFeatures() {
                 <h3 className="text-[#e8e0d6] font-bold text-sm mb-2">{title}</h3>
 
                 {/* Desc */}
-                <p className="text-[#6a5848] text-xs leading-relaxed mb-4">{desc}</p>
+                <p className="text-[#c7a486] text-xs leading-relaxed mb-4">{desc}</p>
 
                 {/* Highlights */}
                 <div className="space-y-1.5 border-t border-[#f5f0e8]/[0.04] pt-4">
                   {highlights.map((h) => (
-                    <div key={h} className="flex items-center gap-2 text-xs text-[#5a4838]">
+                    <div key={h} className="flex items-center gap-2 text-xs text-[#c7a486]">
                       <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${c.dot} opacity-60`} />
                       {h}
                     </div>
@@ -204,7 +204,7 @@ export default function LandingFeatures() {
           transition={{ duration: 0.5, delay: 0.2, ease }}
           className="mt-14 text-center"
         >
-          <p className="text-[#5a4838] text-sm">
+          <p className="text-[#c7a486] text-sm">
             All capabilities are included in every subscription tier.{' '}
             <span className="text-[#c9a84c] font-semibold">No hidden fees. No feature paywalls.</span>
           </p>

@@ -81,21 +81,21 @@ export default function LandingFooter() {
               </span>
             </motion.a>
 
-            <p className="text-[#4a3828] text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-[#bd8c61] text-sm leading-relaxed mb-6 max-w-xs">
               India's premier restaurant operating system. QR ordering, POS, kitchen display, and real-time analytics — unified in one platform. Trusted by 2,400+ restaurants.
             </p>
 
             {/* Contact info */}
             <div className="space-y-2.5 mb-6">
-              <a href="mailto:hello@dinera.in" className="flex items-center gap-2.5 text-[#4a3828] hover:text-[#c9a84c] transition-colors text-sm group">
+              <a href="mailto:hello@dinera.in" className="flex items-center gap-2.5 text-[#bd8c61] hover:text-[#c9a84c] transition-colors text-sm group">
                 <Mail className="w-4 h-4 text-[#3a2820] group-hover:text-[#c9a84c] transition-colors" />
                 hello@dinera.in
               </a>
-              <a href="tel:+919999999999" className="flex items-center gap-2.5 text-[#4a3828] hover:text-[#c9a84c] transition-colors text-sm group">
+              <a href="tel:+919999999999" className="flex items-center gap-2.5 text-[#bd8c61] hover:text-[#c9a84c] transition-colors text-sm group">
                 <Phone className="w-4 h-4 text-[#3a2820] group-hover:text-[#c9a84c] transition-colors" />
                 +91 99999 99999
               </a>
-              <div className="flex items-start gap-2.5 text-[#4a3828] text-sm">
+              <div className="flex items-start gap-2.5 text-[#bd8c61] text-sm">
                 <MapPin className="w-4 h-4 text-[#3a2820] mt-0.5 shrink-0" />
                 Connaught Place, New Delhi — 110001
               </div>
@@ -109,7 +109,7 @@ export default function LandingFooter() {
                   href={href}
                   aria-label={label}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-9 h-9 rounded-lg glass border border-[#f5f0e8]/[0.06] flex items-center justify-center text-[#3a3028] hover:text-[#c9a84c] hover:border-[#b8922a]/22 transition-all duration-200"
+                  className="w-9 h-9 rounded-lg glass border border-[#f5f0e8]/[0.06] flex items-center justify-center text-[#917966] hover:text-[#c9a84c] hover:border-[#b8922a]/22 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" />
                 </motion.a>
@@ -126,7 +126,7 @@ export default function LandingFooter() {
                   <li key={label}>
                     <button
                       onClick={() => scrollTo(href)}
-                      className="text-[#3a3028] hover:text-[#8a7868] text-sm transition-colors duration-200 text-left"
+                      className="text-[#917966] hover:text-[#d1bba8] text-sm transition-colors duration-200 text-left"
                     >
                       {label}
                     </button>
@@ -139,10 +139,10 @@ export default function LandingFooter() {
 
         {/* Cities we serve */}
         <div className="py-5 border-t border-[#f5f0e8]/[0.03]">
-          <p className="text-[#2a2520] text-xs text-center mb-2 uppercase tracking-wider">Serving Restaurants Across India</p>
+          <p className="text-[#ffc992] text-xs text-center mb-2 uppercase tracking-wider">Serving Restaurants Across India</p>
           <div className="flex flex-wrap justify-center gap-2">
             {CITIES.map((city) => (
-              <span key={city} className="px-3 py-1 rounded-full bg-[#f5f0e8]/[0.02] border border-[#f5f0e8]/[0.04] text-[#2a2520] text-[11px]">
+              <span key={city} className="px-3 py-1 rounded-full bg-[#f5f0e8]/[0.02] border border-[#f5f0e8]/[0.04] text-[#ffc992] text-[11px]">
                 {city}
               </span>
             ))}
@@ -151,16 +151,16 @@ export default function LandingFooter() {
 
         {/* Bottom bar */}
         <div className="py-6 border-t border-[#f5f0e8]/[0.03] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[#2a2520] text-xs text-center sm:text-left">
+          <p className="text-[#ffc992] text-xs text-center sm:text-left">
             © 2025 Dinera Technologies Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 text-xs text-[#2a2520]">
+            <div className="flex items-center gap-1.5 text-xs text-[#ffc992]">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
               All systems operational
             </div>
             <span className="text-[#1e1c1a]">•</span>
-            <span className="text-[#2a2520] text-xs">Crafted with care in India 🇮🇳</span>
+            <span className="text-[#ffc992] text-xs">Crafted with care in India 🇮🇳</span>
           </div>
         </div>
       </div>

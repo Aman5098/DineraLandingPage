@@ -73,7 +73,7 @@ const colorMap: Record<string, { bg: string; border: string; text: string; iconB
   wine:    { bg: 'bg-[#6b1d2e]/6',  border: 'border-[#8b2035]/18',  text: 'text-[#b8705a]',  iconBg: 'bg-[#6b1d2e]/10',  glow: 'hover:shadow-[0_0_28px_rgba(107,29,46,0.08)]',       tagBg: 'bg-[#6b1d2e]/15 text-[#b8705a] border-[#8b2035]/20'  },
   gold:    { bg: 'bg-[#6b4a10]/6',  border: 'border-[#b8922a]/18',  text: 'text-[#c9a84c]',  iconBg: 'bg-[#b8922a]/10',  glow: 'hover:shadow-[0_0_28px_rgba(184,146,42,0.08)]',      tagBg: 'bg-[#b8922a]/12 text-[#c9a84c] border-[#b8922a]/20'  },
   warm:    { bg: 'bg-[#3a2820]/6',  border: 'border-[#5a3828]/18',  text: 'text-[#a09080]',  iconBg: 'bg-[#3a2820]/12',  glow: 'hover:shadow-[0_0_28px_rgba(90,56,40,0.08)]',        tagBg: 'bg-[#3a2820]/15 text-[#a09080] border-[#5a3828]/20'  },
-  neutral: { bg: 'bg-[#1e1c1a]/6',  border: 'border-[#3a3530]/18',  text: 'text-[#8a7868]',  iconBg: 'bg-[#2a2520]/12',  glow: 'hover:shadow-[0_0_28px_rgba(50,45,40,0.08)]',        tagBg: 'bg-[#2a2520]/15 text-[#8a7868] border-[#3a3530]/20'  },
+  neutral: { bg: 'bg-[#1e1c1a]/6',  border: 'border-[#3a3530]/18',  text: 'text-[#d1bba8]',  iconBg: 'bg-[#ffc992]/12',  glow: 'hover:shadow-[0_0_28px_rgba(50,45,40,0.08)]',        tagBg: 'bg-[#ffc992]/15 text-[#d1bba8] border-[#3a3530]/20'  },
 };
 
 export default function LandingSolution() {
@@ -131,7 +131,7 @@ export default function LandingSolution() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease }}
-            className="text-[#7a6858] text-lg max-w-2xl mx-auto"
+            className="text-[#d1c1b2] text-lg max-w-2xl mx-auto"
           >
             Dinera was designed around the specific operational failures that cost independent restaurants revenue, reputation, and owner sanity every single day.
           </motion.p>
@@ -163,7 +163,7 @@ export default function LandingSolution() {
                       <span className="px-3 py-1 rounded-lg bg-[#6b1d2e]/10 border border-[#8b2035]/15 text-[#8a5848] text-xs font-medium line-through decoration-[#8b2035]/40">
                         ✗ {problem}
                       </span>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#4a3828] shrink-0" />
+                      <ArrowRight className="w-3.5 h-3.5 text-[#bd8c61] shrink-0" />
                       <span className={`px-3 py-1 rounded-lg border ${c.border} ${c.iconBg} ${c.text} text-xs font-semibold`}>
                         ✓ {solution}
                       </span>
@@ -175,7 +175,7 @@ export default function LandingSolution() {
                     </div>
 
                     <h3 className={`font-bold text-base mb-1.5 ${c.text}`}>{benefitTitle}</h3>
-                    <p className="text-[#7a6858] text-sm leading-relaxed">{benefit}</p>
+                    <p className="text-[#d1c1b2] text-sm leading-relaxed">{benefit}</p>
                   </div>
 
                   {/* Check badge */}

@@ -81,7 +81,7 @@ const TESTIMONIALS = [
 const colorMap: Record<string, { text: string; border: string; bg: string; metric: string }> = {
   wine:    { text: 'text-[#b8705a]', border: 'border-[#8b2035]/15',  bg: 'bg-[#6b1d2e]/8',  metric: 'text-[#c07868]' },
   gold:    { text: 'text-[#c9a84c]', border: 'border-[#b8922a]/15',  bg: 'bg-[#b8922a]/8',  metric: 'text-[#d4b97a]' },
-  neutral: { text: 'text-[#8a7868]', border: 'border-[#3a3530]/15',  bg: 'bg-[#2a2520]/8',  metric: 'text-[#9a8878]' },
+  neutral: { text: 'text-[#d1bba8]', border: 'border-[#3a3530]/15',  bg: 'bg-[#ffc992]/8',  metric: 'text-[#9a8878]' },
   warm:    { text: 'text-[#a09080]', border: 'border-[#5a3828]/15',  bg: 'bg-[#3a2820]/8',  metric: 'text-[#b0a090]' },
 };
 
@@ -135,7 +135,7 @@ export default function LandingTestimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease }}
-            className="text-[#7a6858] text-lg max-w-2xl mx-auto"
+            className="text-[#d1c1b2] text-lg max-w-2xl mx-auto"
           >
             They were sceptical, busy, and frustrated — exactly as you may be now. Their results speak for themselves.
           </motion.p>
@@ -168,7 +168,7 @@ export default function LandingTestimonials() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-[#8a7868] text-sm leading-relaxed flex-1 mb-4">
+                <p className="text-[#d1bba8] text-sm leading-relaxed flex-1 mb-4">
                   "{quote}"
                 </p>
 
@@ -183,13 +183,13 @@ export default function LandingTestimonials() {
                     <img src={avatar} alt={name} className="w-9 h-9 rounded-full object-cover border-2 border-[#f5f0e8]/[0.06]" />
                     <div>
                       <p className="text-[#e8e0d6] font-semibold text-sm">{name}</p>
-                      <p className="text-[#4a3828] text-[11px]">{role}</p>
+                      <p className="text-[#bd8c61] text-[11px]">{role}</p>
                       <p className="text-[#3a2820] text-[10px]">📍 {location}</p>
                     </div>
                   </div>
                   <div className="text-right shrink-0">
                     <p className={`text-lg font-extrabold ${c.metric}`}>{metric}</p>
-                    <p className="text-[#3a3028] text-[10px] uppercase tracking-wider">{metricLabel}</p>
+                    <p className="text-[#917966] text-[10px] uppercase tracking-wider">{metricLabel}</p>
                   </div>
                 </div>
               </motion.div>
@@ -212,7 +212,7 @@ export default function LandingTestimonials() {
                 {Array(5).fill(0).map((_, i) => <Star key={i} className="w-4 h-4 text-[#b8922a] fill-[#b8922a]" />)}
                 <span className="text-[#e8e0d6] font-bold ml-1">4.9</span>
               </div>
-              <p className="text-[#4a3828] text-xs">Based on 847 verified Google Reviews</p>
+              <p className="text-[#bd8c61] text-xs">Based on 847 verified Google Reviews</p>
             </div>
           </div>
           <div className="w-px h-8 bg-[#f5f0e8]/[0.06] hidden sm:block" />
@@ -223,7 +223,7 @@ export default function LandingTestimonials() {
                 {Array(5).fill(0).map((_, i) => <Star key={i} className="w-4 h-4 text-[#b8922a] fill-[#b8922a]" />)}
                 <span className="text-[#e8e0d6] font-bold ml-1">4.8</span>
               </div>
-              <p className="text-[#4a3828] text-xs">Product of the Month — Product Hunt</p>
+              <p className="text-[#bd8c61] text-xs">Product of the Month — Product Hunt</p>
             </div>
           </div>
         </motion.div>

@@ -145,7 +145,7 @@ export default function LandingHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.55, ease }}
-              className="flex flex-wrap items-center gap-4 text-xs text-[#7a6858]"
+              className="flex flex-wrap items-center gap-4 text-xs text-[#d1c1b2]"
             >
               {['No credit card required', '14-day free trial', 'Cancel anytime'].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
@@ -176,7 +176,7 @@ export default function LandingHero() {
                 <div className="flex text-[#b8922a] text-xs">
                   {Array(5).fill(0).map((_, i) => <Star key={i} className="w-3 h-3 fill-[#b8922a]" />)}
                 </div>
-                <p className="text-[#7a6858] text-xs mt-0.5">Trusted by 2,400+ restaurant owners</p>
+                <p className="text-[#d1c1b2] text-xs mt-0.5">Trusted by 2,400+ restaurant owners</p>
               </div>
             </motion.div>
           </div>
@@ -199,7 +199,7 @@ export default function LandingHero() {
                   <div className="w-3 h-3 rounded-full bg-[#b8922a]/70" />
                   <div className="w-3 h-3 rounded-full bg-emerald-600/70" />
                 </div>
-                <div className="flex-1 mx-3 bg-white/[0.04] border border-white/[0.05] rounded-md px-3 py-1 text-xs text-[#5a4838]">
+                <div className="flex-1 mx-3 bg-white/[0.04] border border-white/[0.05] rounded-md px-3 py-1 text-xs text-[#c7a486]">
                   app.dinera.in/dashboard
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-emerald-500 font-medium">
@@ -249,7 +249,7 @@ export default function LandingHero() {
                     >
                       <Icon className={`w-3.5 h-3.5 ${color} mb-1`} />
                       <p className={`text-sm font-bold ${color}`}>{value}</p>
-                      <p className="text-[#5a4838] text-[10px]">{label}</p>
+                      <p className="text-[#c7a486] text-[10px]">{label}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -257,7 +257,7 @@ export default function LandingHero() {
                 {/* Live orders */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <p className="text-xs font-semibold text-[#7a6858] uppercase tracking-wider">Live Orders</p>
+                    <p className="text-xs font-semibold text-[#d1c1b2] uppercase tracking-wider">Live Orders</p>
                     <span className="text-[10px] text-[#b8922a] font-medium">Auto-sync</span>
                   </div>
                   <div className="space-y-1.5">
@@ -271,7 +271,7 @@ export default function LandingHero() {
                       >
                         <div className="flex items-center gap-2.5">
                           <span className="text-xs font-bold text-[#c0b0a0] w-7">{table}</span>
-                          <span className="text-xs text-[#7a6858]">{item}</span>
+                          <span className="text-xs text-[#d1c1b2]">{item}</span>
                         </div>
                         <span className={`flex items-center gap-1.5 text-[10px] font-semibold ${color}`}>
                           <span className={`w-1.5 h-1.5 rounded-full ${dot} animate-pulse`} />
@@ -296,7 +296,7 @@ export default function LandingHero() {
                 </div>
                 <div>
                   <p className="text-[#c9a84c] font-bold text-sm">+38% Revenue</p>
-                  <p className="text-[#5a4838] text-[10px]">vs. last month</p>
+                  <p className="text-[#c7a486] text-[10px]">vs. last month</p>
                 </div>
               </div>
             </motion.div>
@@ -312,7 +312,7 @@ export default function LandingHero() {
                 <span className="text-base">🔔</span>
                 <div>
                   <p className="text-[#e8e0d6] font-semibold text-xs">New Order — Table 12</p>
-                  <p className="text-[#5a4838] text-[10px]">Chicken Biryani ×2</p>
+                  <p className="text-[#c7a486] text-[10px]">Chicken Biryani ×2</p>
                 </div>
               </div>
             </motion.div>
@@ -345,7 +345,7 @@ export default function LandingHero() {
               >
                 {value}
               </p>
-              <p className="text-[#7a6858] text-sm font-medium">{label}</p>
+              <p className="text-[#d1c1b2] text-sm font-medium">{label}</p>
             </motion.div>
           ))}
         </motion.div>

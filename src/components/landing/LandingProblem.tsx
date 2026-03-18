@@ -121,7 +121,7 @@ export default function LandingProblem() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease }}
-            className="text-[#7a6858] text-lg max-w-2xl mx-auto"
+            className="text-[#d1c1b2] text-lg max-w-2xl mx-auto"
           >
             These are not edge cases. They are the daily reality for 90% of independent restaurant owners across India.
           </motion.p>
@@ -145,8 +145,8 @@ export default function LandingProblem() {
                 </div>
               </div>
               <h3 className={`font-bold text-base mb-1 ${color}`}>{title}</h3>
-              <p className="text-[#5a4838] text-xs font-medium italic mb-2">{subtitle}</p>
-              <p className="text-[#8a7868] text-sm leading-relaxed">{desc}</p>
+              <p className="text-[#c7a486] text-xs font-medium italic mb-2">{subtitle}</p>
+              <p className="text-[#d1bba8] text-sm leading-relaxed">{desc}</p>
             </motion.div>
           ))}
         </div>
@@ -170,8 +170,8 @@ export default function LandingProblem() {
                 <div className="flex items-center gap-3 mb-1">
                   <h3 className="font-bold text-lg text-[#c9a84c]">{last.title}</h3>
                 </div>
-                <p className="text-[#5a4838] text-sm italic mb-2">{last.subtitle}</p>
-                <p className="text-[#8a7868] leading-relaxed">{last.desc}</p>
+                <p className="text-[#c7a486] text-sm italic mb-2">{last.subtitle}</p>
+                <p className="text-[#d1bba8] leading-relaxed">{last.desc}</p>
               </div>
               <div className="shrink-0 px-6 py-3 rounded-xl bg-[#b8922a]/8 border border-[#b8922a]/25 text-[#c9a84c] text-sm font-semibold text-center">
                 The Root<br />Problem
@@ -191,13 +191,13 @@ export default function LandingProblem() {
           <p className="text-[#c0b0a0] text-lg font-medium">
             If three or more of these describe your restaurant daily —
           </p>
-          <p className="text-[#7a6858] mt-1">
+          <p className="text-[#d1c1b2] mt-1">
             Dinera was built precisely for your operation.
           </p>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="mt-4 text-[#4a3828] text-2xl"
+            className="mt-4 text-[#bd8c61] text-2xl"
           >
             ↓
           </motion.div>

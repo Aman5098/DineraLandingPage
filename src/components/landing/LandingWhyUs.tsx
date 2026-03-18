@@ -57,7 +57,7 @@ const REASONS = [
 const colorMap: Record<string, { text: string; border: string; bg: string; statText: string }> = {
   gold:    { text: 'text-[#c9a84c]', border: 'border-[#b8922a]/18',  bg: 'bg-[#b8922a]/8',  statText: 'text-[#d4b97a]' },
   wine:    { text: 'text-[#b8705a]', border: 'border-[#8b2035]/18',  bg: 'bg-[#6b1d2e]/8',  statText: 'text-[#c07868]' },
-  neutral: { text: 'text-[#8a7868]', border: 'border-[#3a3530]/18',  bg: 'bg-[#2a2520]/8',  statText: 'text-[#9a8878]' },
+  neutral: { text: 'text-[#d1bba8]', border: 'border-[#3a3530]/18',  bg: 'bg-[#ffc992]/8',  statText: 'text-[#9a8878]' },
   warm:    { text: 'text-[#a09080]', border: 'border-[#5a3828]/18',  bg: 'bg-[#3a2820]/8',  statText: 'text-[#b0a090]' },
 };
 
@@ -126,7 +126,7 @@ export default function LandingWhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2, ease }}
-            className="text-[#7a6858] text-lg max-w-2xl mx-auto"
+            className="text-[#d1c1b2] text-lg max-w-2xl mx-auto"
           >
             Not feature-count. The genuine reasons restaurant owners choose Dinera and do not look back.
           </motion.p>
@@ -152,11 +152,11 @@ export default function LandingWhyUs() {
                   </div>
                   <div className="text-right">
                     <p className={`text-2xl font-extrabold ${c.statText}`}>{stat}</p>
-                    <p className="text-[#3a3028] text-[10px] uppercase tracking-wider">{statLabel}</p>
+                    <p className="text-[#917966] text-[10px] uppercase tracking-wider">{statLabel}</p>
                   </div>
                 </div>
                 <h3 className="text-[#e8e0d6] font-bold text-base mb-2">{title}</h3>
-                <p className="text-[#6a5848] text-sm leading-relaxed">{desc}</p>
+                <p className="text-[#c7a486] text-sm leading-relaxed">{desc}</p>
               </motion.div>
             );
           })}
@@ -170,7 +170,7 @@ export default function LandingWhyUs() {
           transition={{ duration: 0.55, ease }}
         >
           <h3 className="text-center text-[#e8e0d6] font-bold text-xl mb-8">
-            <span className="text-[#5a4838]">The Competition vs. </span>
+            <span className="text-[#c7a486]">The Competition vs. </span>
             <span
               style={{
                 background: 'linear-gradient(135deg, #a02840, #c9a84c)',
@@ -188,9 +188,9 @@ export default function LandingWhyUs() {
               <table className="w-full min-w-[600px]">
                 <thead>
                   <tr className="border-b border-[#f5f0e8]/[0.05]">
-                    <th className="text-left px-6 py-4 text-[#4a3828] text-xs uppercase tracking-wider font-semibold">Platform</th>
+                    <th className="text-left px-6 py-4 text-[#bd8c61] text-xs uppercase tracking-wider font-semibold">Platform</th>
                     {CHECK_COLS.map(({ label }) => (
-                      <th key={label} className="text-center px-4 py-4 text-[#4a3828] text-xs uppercase tracking-wider font-semibold">{label}</th>
+                      <th key={label} className="text-center px-4 py-4 text-[#bd8c61] text-xs uppercase tracking-wider font-semibold">{label}</th>
                     ))}
                   </tr>
                 </thead>
@@ -210,7 +210,7 @@ export default function LandingWhyUs() {
                     >
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-2">
-                          <span className={`font-bold text-sm ${comp.isUs ? 'text-[#c9a84c]' : 'text-[#5a4838]'}`}>
+                          <span className={`font-bold text-sm ${comp.isUs ? 'text-[#c9a84c]' : 'text-[#c7a486]'}`}>
                             {comp.name}
                           </span>
                           {comp.isUs && (
@@ -225,16 +225,16 @@ export default function LandingWhyUs() {
                         if (key === 'price') {
                           return (
                             <td key={key} className="text-center px-4 py-4">
-                              <span className={`font-bold text-sm ${comp.isUs ? 'text-emerald-500' : 'text-[#3a3028]'}`}>{val as string}</span>
+                              <span className={`font-bold text-sm ${comp.isUs ? 'text-emerald-500' : 'text-[#917966]'}`}>{val as string}</span>
                             </td>
                           );
                         }
                         return (
                           <td key={key} className="text-center px-4 py-4">
                             {val ? (
-                              <span className={`text-lg ${comp.isUs ? 'text-emerald-500' : 'text-[#5a4838]'}`}>✓</span>
+                              <span className={`text-lg ${comp.isUs ? 'text-emerald-500' : 'text-[#c7a486]'}`}>✓</span>
                             ) : (
-                              <span className="text-[#2a2520] text-lg">✗</span>
+                              <span className="text-[#ffc992] text-lg">✗</span>
                             )}
                           </td>
                         );

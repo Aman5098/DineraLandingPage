@@ -71,7 +71,7 @@ export default function LandingDemoCTA() {
                   </span>
                 </h2>
 
-                <p className="text-[#7a6858] text-lg leading-relaxed mb-8">
+                <p className="text-[#d1c1b2] text-lg leading-relaxed mb-8">
                   A focused 30-minute live demonstration, built around your restaurant's specific structure and challenges.
                   <span className="text-[#c0b0a0] font-medium"> No sales pressure. Only honest answers.</span>
                 </p>
@@ -90,9 +90,9 @@ export default function LandingDemoCTA() {
                 <div className="flex items-center gap-6">
                   {TRUST_STATS.map(({ icon: Icon, value, label }) => (
                     <div key={label} className="text-center">
-                      <Icon className="w-4 h-4 text-[#4a3828] mx-auto mb-1" />
+                      <Icon className="w-4 h-4 text-[#bd8c61] mx-auto mb-1" />
                       <p className="text-[#e8e0d6] font-bold text-sm">{value}</p>
-                      <p className="text-[#3a3028] text-[10px] uppercase tracking-wider">{label}</p>
+                      <p className="text-[#917966] text-[10px] uppercase tracking-wider">{label}</p>
                     </div>
                   ))}
                 </div>
@@ -151,7 +151,7 @@ export default function LandingDemoCTA() {
                   </motion.button>
                 </div>
 
-                <p className="text-center text-[#3a3028] text-xs">
+                <p className="text-center text-[#917966] text-xs">
                   🔒 Your information is never shared. No unsolicited communication. Unsubscribe anytime.
                 </p>
               </div>
